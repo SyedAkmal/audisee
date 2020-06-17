@@ -1,0 +1,86 @@
+@media (max-width: 1200px){
+.container {width:100% !important;}
+}
+
+@media (max-width: 1080px){
+.logo_mwidth {max-width:250px}
+nav.navbar ul.nav>li>a{padding:33px 17px 24px}
+nav.navbar ul.nav>li>a{font-weight:500}
+}
+@media (max-width:992px){
+.contn_align {position:relative;margin-top:0}
+.main_featur {padding:80px 0 40px}
+.main_abputs {padding:20px 0 40px}
+.about_image {padding-top:0;padding-left:0}
+.text_hedbox {padding:17px 15px 30px;margin-right:0}
+.subsm_headr {font-size:16px;line-height:26px;margin:0 0 17px}
+.main_servse {padding:40px 0}
+.main_prodet {padding:40px 10px}
+.main_worksc {padding:40px 0}
+.logo_mwidt2 {max-width:240px;margin:0 auto 25px;display:block}
+.footer_adrs li span{display:table;font-weight:600;padding-bottom:2px;border-bottom:2px solid #404043;text-align:center;margin:auto}
+.footer_adrs li p{margin:7px 0 0;text-align:center}
+.main_footer {padding-top:40px;padding-bottom:40px}
+.footer_head {font-size:20px;line-height:20px;padding-bottom:14px;margin-bottom:30px;text-align:center}
+.footer_head:after{left:50%;margin-left:-25px}
+.footer_adr2 li a{padding-left:0;text-align:center;display:table;margin:auto}
+.footer_adr2 li a:before{position:relative;font-weight:600;margin:0 10px 0 0}
+.footer_imgn {display:none}
+.main_navbar .menubg:before{left:2%;width:96%;top:-15px}
+nav.navbar ul.nav>li>a{padding:10px}
+}
+@media (max-width:767px){
+.banner_head {font-size:36px;font-weight:700;margin:0 0 15px;padding:0}
+.about_image {margin-bottom:20px}
+.footer_text {float:none;text-align:center}
+.footer_socl {float:none;display:table;margin:auto}
+.main_abputs {
+    padding: 20px 0 0px;
+}
+}
+@media (max-width:600px){
+.concept_thr {float:left;width:100%;padding:15px}
+.featr_icons {width:80px;height:80px;margin:0 auto 15px}
+.featr_icons img{max-width:40px}
+.concept_thw {box-shadow:0 0 15px 0 rgba(0,0,0,.15)}
+.main_servse .carousel-wrap{padding:0 20px}
+.main_servse .owl-nav i{font-size:40px;display:block}
+.class_three {float:left;width:100%;padding:15px}
+.top_numbers {top:22px}
+.class_threw {padding:130px 30px 30px}
+.pading_tops {padding-top:0}
+.main_featur {padding:20px 0}
+}
+@media (max-width:500px){
+.main_navbar .menubg:before{top:-5px;display:none}
+.main_navbar {position:relative;top:0}
+.main_navbar nav.navbar .navbar-header,
+.main_navbar nav.navbar .navbar-nav{padding-left:0;padding-right:0}
+.main_banner .fade-carousel {position:relative;height:250px;}
+.main_banner .fade-carousel .carousel-inner .item{height:250px;}
+.main_banner .fade-carousel .slides .slide-1,.fade-carousel .slides .slide-2,
+.main_banner .fade-carousel .slides .slide-3{height:250px;}
+.logo_mwidth {max-width:210px}
+nav.navbar .navbar-toggle{margin-right:15px;margin-top:9px;font-size:20px}
+.banner_butn {padding:9px 15px 8px;margin:0 0 0;font-size:14px}
+.main_header {font-size:27px;margin:0 0 15px;line-height:36px}
+.about_carol {padding:20px 20px 3px}
+.about_carol .carousel-indicators{bottom:-76px;left:-13px}
+.main_navbar .navbar-collapse{padding-right:0;padding-left:0}
+.abut_banner {padding: 20px;}
+.abut_banner .main_header {margin:0;font-size: 28px;line-height: 34px;}
+.item_colmn3 {width: 50%;}
+.prodct_page {padding: 30px 0;}
+.prodct_page .main_header {font-size: 23px;margin: 0 0 10px;line-height: 30px;}
+}
+@media (max-width:480px){
+.item_colmn3 {width: 100%;}
+}
+@media (max-width:380px){
+.footer_text {float:none;text-align:center;font-size:13px}
+.main_banner .fade-carousel {position:relative;height:210px;}
+.main_banner .fade-carousel .carousel-inner .item{height:210px;}
+.main_banner .fade-carousel .slides .slide-1,.fade-carousel .slides .slide-2,
+.main_banner .fade-carousel .slides .slide-3{height:210px;}
+}
+
