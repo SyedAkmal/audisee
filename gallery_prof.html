@@ -250,127 +250,13 @@
 	<script src='js/bootstrap.min.js'></script>
 	<script src="js/menubar.js"></script>
 	<!-- <script src="js/gallery.js"></script> -->
-	<!--<script>
+	<script>
 
-        $('.container-gallery').gallery({
-            height: '35vw',
-            items: 6,
-            thumbHeight: '10vw',
-            showThumbnails: true,
-            singleLine: false,
-            0: {
-                height: 200,
-                items: 2,
-                thumbHeight: 50
-            },
-            320: {
-                height: 300,
-                items: 3,
-                thumbHeight: 70
-            },
-            480: {
-                height: 300,
-                thumbHeight: 100,
-                items: 3
+$("body").children().each(function () {
+    $(this).html( $(this).html().replace(/Thumbnail Slider trial version/g,"") );
+});
 
-            },
-            600: {
-                height: 300,
-                items: 4
-            },
-            768: {
-
-                //showThumbnails: false,
-                items: 4
-                //height: 300,
-                //thumbHeight: 50
-            },
-
-
-
-        });
-
-
-		$('.container-gallery1').gallery({
-            height: '35vw',
-            items: 6,
-            thumbHeight: '10vw',
-            showThumbnails: true,
-            singleLine: false,
-            0: {
-                height: 200,
-                items: 2,
-                thumbHeight: 50
-            },
-            320: {
-                height: 300,
-                items: 3,
-                thumbHeight: 70
-            },
-            480: {
-                height: 300,
-                thumbHeight: 100,
-                items: 3
-
-            },
-            600: {
-                height: 300,
-                items: 4
-            },
-            768: {
-
-                //showThumbnails: false,
-                items: 4
-                //height: 300,
-                //thumbHeight: 50
-            },
-
-
-
-        });
-		$('.container-gal').gallery({
-        height: '35vw',
-        items: 6,
-        thumbHeight: 100,
-        showThumbnails: true,
-        singleLine: true,
-        320: {
-            items: 1
-        },
-        480: {
-            items: 2,
-            //height: 250,
-            //thumbHeight: 60
-        },
-        768: {
-
-            items: 4,
-            //height: 300,
-            //thumbHeight: 90
-        },
-        600: {
-
-            items: 3
-        },
-        992: {
-
-            items: 5,
-            //height: 300
-        }
-
-    });
-
-    </script>
-    <script>
-		 function home(){
-			$("#set1G").show();
-            $("#set2G").hide();
-		   }
-		   function prof(){
-			$("#set1G").hide();
-            $("#set2G").show();
-		   }
-        </script> -->
+	</script>
 	<a href="index.html#0" class="cd-top">Top</a>
 </body>
 
