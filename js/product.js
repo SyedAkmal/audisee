@@ -91,8 +91,8 @@ $('#product_slide').owlCarousel({
     "<i class='fa fa-caret-left'></i>",
     "<i class='fa fa-caret-right'></i>"
   ],
-  autoplay: true,
-  autoplayHoverPause: false,
+  autoplay: false,
+  autoplayHoverPause: true,
   responsive: {
     0: {
       items: 1
