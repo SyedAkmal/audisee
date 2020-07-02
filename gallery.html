@@ -25,8 +25,23 @@
 	<link href="css/thumbnail-slider.css" rel="stylesheet" type="text/css" />
 	<script src="js/thumbnail-slider.js" type="text/javascript"></script>
 	<script src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/fs-gal.css" />
+	<style type="text/css">
+		/* For demo only */
+		html, body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+		}
+		.fs-gal {
+			width: 25%;
+			height: auto;
+			float: left;
+		}
+	</style>
 </head>
-
 <body>
 
 	<div class="full_banner">
@@ -85,7 +100,7 @@
 	</div> -->
 	</div>
 	<div class="main_abputs" id="gallery">
-		<div class="container new_align">
+		<!-- <div class="container new_align">
 			<div class="row">
 				<div class="col-md-6">
 					<h2><a class="gallerylink" href="gallery.html">HOME</a></h2>
@@ -164,10 +179,27 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
+
+		
+        <!-- Create objects with class 'fs-gal' and include the attribute 'data-url' with the relative or absolute path which is to be displayed. -->
+        <img class="fs-gal" src="images/example1.jpg" alt="Example Image 1" data-url="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1701&w=2633" /><!-- Alt tags can be used to display info in the gallery viewer. -->
+        <img class="fs-gal" src="images/example2.jpg" title="Example Image 2" data-url="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1701&w=2633" /><!-- The title tag can be used as well. -->
+        <img class="fs-gal" src="images/example1.jpg" data-url="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1701&w=2633" />
+        <img class="fs-gal" src="images/example2.jpg" data-url="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1701&w=2633" />
+
+        <!-- Full screen gallery. -->
+        <div class="fs-gal-view">
+            <h1></h1>
+            <img class="fs-gal-prev fs-gal-nav" src="images/prev.svg" alt="Previous picture" title="Previous picture" />
+            <img class="fs-gal-next fs-gal-nav" src="images/next.svg" alt="Next picture" title="Next picture" />
+            <img class="fs-gal-close" src="images/close.svg" alt="Close gallery" title="Close gallery" />
+            <img class="fs-gal-main" src="" alt="" />
+        </div>
+		  
 	</div>
 
-
+	
 	<div class="main_abput3">
 		<div class="container new_align">
 			<div class="row">
@@ -252,10 +284,10 @@
 	</div>
 	<div class="copy_footer">Copyright © 2020 Audisee. All Rights Reserved</div>
 
-
 	<script src='js/jquery-2.2.4.min.js'></script>
-	<script src='js/owl.carousel.min.js'></script>
-	<script src='js/product.js'></script>
+	<script type="text/javascript" src="js/fs-gal.js"></script>
+	<!-- <script src='js/owl.carousel.min.js'></script>
+	<script src='js/product.js'></script> -->
 	<script src='js/bootstrap.min.js'></script>
 	<script src="js/menubar.js"></script>
 	<!-- <script src="js/gallery.js"></script> -->
