@@ -28,13 +28,15 @@
 	<link rel="stylesheet" type="text/css" href="css/fs-gal.css" />
 	<style type="text/css">
 		/* For demo only */
-		html, body {
+		html,
+		body {
 			margin: 0;
 			padding: 0;
 			height: 100%;
 			width: 100%;
 			text-align: center;
 		}
+
 		.fs-gal {
 			width: 25%;
 			height: auto;
@@ -42,6 +44,7 @@
 		}
 	</style>
 </head>
+
 <body>
 
 	<div class="full_banner">
@@ -59,7 +62,15 @@
 							<div class="collapse navbar-collapse" id="navbar-menu">
 								<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 									<li><a href="index.html#aboutus">About Us</a></li>
-									<li><a href="index.html#products">Products</a></li>
+									<li class="dropdown"><a href="#products" class="dropdown-toggle"
+											data-toggle="dropdown" role="button" aria-haspopup="true"
+											aria-expanded="true"> <span class="nav-label">Products</span> <span
+												class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="products.html">All</a></li>
+											<li><a href="acoustic.html">Acoustics</a></li>
+										</ul>
+									</li>
 									<li><a href="index.html#features">Features</a></li>
 									<li><a href="services.html">Services</a></li>
 									<li><a href="services.html#news">News</a></li>
@@ -181,25 +192,31 @@
 			</div>
 		</div> -->
 
-		
-        <!-- Create objects with class 'fs-gal' and include the attribute 'data-url' with the relative or absolute path which is to be displayed. -->
-        <img class="fs-gal" src="images/example1.jpg" alt="Example Image 1" data-url="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1701&w=2633" /><!-- Alt tags can be used to display info in the gallery viewer. -->
-        <img class="fs-gal" src="images/example2.jpg" title="Example Image 2" data-url="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1701&w=2633" /><!-- The title tag can be used as well. -->
-        <img class="fs-gal" src="images/example1.jpg" data-url="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1701&w=2633" />
-        <img class="fs-gal" src="images/example2.jpg" data-url="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1701&w=2633" />
 
-        <!-- Full screen gallery. -->
-        <div class="fs-gal-view">
-            <h1></h1>
-            <img class="fs-gal-prev fs-gal-nav" src="images/prev.svg" alt="Previous picture" title="Previous picture" />
-            <img class="fs-gal-next fs-gal-nav" src="images/next.svg" alt="Next picture" title="Next picture" />
-            <img class="fs-gal-close" src="images/close.svg" alt="Close gallery" title="Close gallery" />
-            <img class="fs-gal-main" src="" alt="" />
-        </div>
-		  
+		<!-- Create objects with class 'fs-gal' and include the attribute 'data-url' with the relative or absolute path which is to be displayed. -->
+		<img class="fs-gal" src="images/example1.jpg" alt="Example Image 1"
+			data-url="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1701&w=2633" />
+		<!-- Alt tags can be used to display info in the gallery viewer. -->
+		<img class="fs-gal" src="images/example2.jpg" title="Example Image 2"
+			data-url="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1701&w=2633" />
+		<!-- The title tag can be used as well. -->
+		<img class="fs-gal" src="images/example1.jpg"
+			data-url="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1701&w=2633" />
+		<img class="fs-gal" src="images/example2.jpg"
+			data-url="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1701&w=2633" />
+
+		<!-- Full screen gallery. -->
+		<div class="fs-gal-view">
+			<h1></h1>
+			<img class="fs-gal-prev fs-gal-nav" src="images/prev.svg" alt="Previous picture" title="Previous picture" />
+			<img class="fs-gal-next fs-gal-nav" src="images/next.svg" alt="Next picture" title="Next picture" />
+			<img class="fs-gal-close" src="images/close.svg" alt="Close gallery" title="Close gallery" />
+			<img class="fs-gal-main" src="" alt="" />
+		</div>
+
 	</div>
 
-	
+
 	<div class="main_abput3">
 		<div class="container new_align">
 			<div class="row">

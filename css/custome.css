@@ -733,7 +733,7 @@ nav.navbar .navbar-nav>li:first-child>a{border-top:none}
 nav.navbar ul.navbar-nav.navbar-left>li:last-child>ul.dropdown-menu{border-bottom:solid 1px #e0e0e0}
 nav.navbar ul.nav li.dropdown li a.dropdown-toggle{float:none!important;position:relative;display:block;width:100%}
 nav.navbar ul.nav li.dropdown ul.dropdown-menu{width:100%;position:relative!important;top:5px;background-color:transparent;float:none;border:none;padding:0 0 0 15px!important;margin:0 0 15px!important;-moz-box-shadow:0 0 0;-webkit-box-shadow:0 0 0;-o-box-shadow:0 0 0;box-shadow:0 0 0;-moz-border-radius:0;-webkit-border-radius:0 0 0;-o-border-radius:0;border-radius:0;border-top:solid 0 #555}
-nav.navbar ul.nav li.dropdown ul.dropdown-menu>li>a{display:block;width:100%;padding:10px 0}
+nav.navbar ul.nav li.dropdown ul.dropdown-menu>li>a{display:block;width:100%;padding:10px 0;color: #ca7c7c;}
 nav.navbar ul.nav ul.dropdown-menu li a:focus,nav.navbar ul.nav ul.dropdown-menu li a:hover{background-color:transparent}
 nav.navbar ul.nav ul.dropdown-menu ul.dropdown-menu{float:none!important;left:0;padding:0 0 0 15px;position:relative;background:0 0;width:100%}
 nav.navbar ul.nav ul.dropdown-menu li.dropdown.on>ul.dropdown-menu{display:inline-block;margin-top:-10px}
