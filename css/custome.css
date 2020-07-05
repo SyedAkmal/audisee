@@ -43,6 +43,11 @@ body {margin:0;padding:0;font-family: 'Montserrat', sans-serif !important;}
   margin-right: auto;
   /* width: 50%; */
 }
+
+.isf_cls{
+  width: 70% !important;
+    margin-left: 15%;
+}
 .thx-class div > img {
  height: 100px;
  width:100%;
@@ -299,6 +304,7 @@ nav.navbar.affix  ul.nav>li>a {
   /* height: 40px; */
   margin: 1px;
 }
+
 .main_paragr1{line-height:33px;font-size:22px;font-weight:400;margin-bottom:10px;font-family: 'Montserrat', sans-serif}
 .main_paragr0{line-height:28px;font-size:18px;font-weight:400;margin-bottom:10px;font-family: 'Montserrat', sans-serif; text-align: center;padding:30px 0; color:#e6e6e6}
 .main_paragr5{line-height:28px;font-size:24px;font-weight:400;margin-bottom:10px;font-family: 'Montserrat', sans-serif; text-align: center;padding:30px 0; color:#e6e6e6}
@@ -331,7 +337,7 @@ nav.navbar.affix  ul.nav>li>a {
 .borf_righimg {background:'../images/vertical-line.png' no-repeat center;display:block;}
 /* ========================= default ============================ */
 .main_abputs {float:left;width:100%;padding:60px 0;background:linear-gradient( rgba(256, 256, 256, 0.2) 10%, rgba(256, 256, 256, 0.2) 10%),url("../images/bistro-body-bg-pattern.png");position:relative;} 
-.main_abputs:after {content:"";background:url("../images/stripes.png") no-repeat center;position:absolute;left:0;top:0;width:100%;height:100%;z-index:1;} 
+/* .main_abputs:after {content:"";background:url("../images/stripes.png") no-repeat center;position:absolute;left:0;top:0;width:100%;height:100%;z-index:1;}  */
 .main_abputs .main_paragr{margin-bottom:10px}
 .new_align {position:relative;z-index:9;}
 .small_headr {color:#e9212e;font-size:14px;line-height:20px;font-weight:600;text-transform:uppercase;margin:0 0 7px;font-family:Poppins,sans-serif}
@@ -375,7 +381,7 @@ nav.navbar.affix  ul.nav>li>a {
     }
     .thx-class-bg div > img{
       /* height: 100px; */
-    width: 100%;
+    width: 50%;
     margin-top:20px; 
     vertical-align: middle;
     } 
@@ -804,11 +810,19 @@ nav.navbar .tabbed .tab-nav>ul>li>a:before{display:none}
 nav.navbar .tabbed .wrap-tabs{padding-left:15px}
 nav.navbar.navbar-sidebar .fixed-network{padding:0;margin-top:15px;margin-bottom:30px}
 .navlink-right{right:15px}
+.isf_cls{
+  width: 70% !important;
+    margin-left: 75%;
+}
 }
 
 @media (min-width: 480px) and (max-width: 640px) {
 nav.navbar-full ul.nav{padding-top:30px;padding-bottom:30px}
 nav.navbar.no-full .navbar-collapse{max-height:250px!important}
+.isf_cls{
+  width: 70% !important;
+    margin-left: 75%;
+}
 }
 /* ========================= default font awsome ============================ */
 
