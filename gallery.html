@@ -8,95 +8,215 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="">
 	<link href="css/base.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap" rel="stylesheet">
-	<link
-		href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CRaleway:300,400,500,600,700,800,900%7CRubik:300,400,500,700,900&display=swap"
-		rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet" type="text/css">
 
-	<link rel="stylesheet" href="css/lightslider.css" />
-	<style>
-		ul {
-			list-style: none outside none;
-			padding-left: 0;
-			margin: 0;
+	<link href="css/lightgallery.css" rel="stylesheet">
+	<style type="text/css">
+		body {
+			background-color: #152836
 		}
 
-		.demo .item {
-			margin-bottom: 60px;
+		.demo-gallery>ul {
+			margin-bottom: 0;
 		}
 
-		.content-slider li {
-			background-color: #ed3020;
-			text-align: center;
-			color: #FFF;
+		.demo-gallery>ul>li {
+			float: left;
+			margin-bottom: 15px;
+			margin-right: 20px;
+			width: 200px;
 		}
 
-		.content-slider h3 {
-			margin: 0;
-			padding: 70px 0;
+		.demo-gallery>ul>li a {
+			border: 3px solid #FFF;
+			border-radius: 3px;
+			display: block;
+			overflow: hidden;
+			position: relative;
+			float: left;
 		}
 
-		.demo {
-			width: 800px;
+		.demo-gallery>ul>li a>img {
+			-webkit-transition: -webkit-transform 0.15s ease 0s;
+			-moz-transition: -moz-transform 0.15s ease 0s;
+			-o-transition: -o-transform 0.15s ease 0s;
+			transition: transform 0.15s ease 0s;
+			-webkit-transform: scale3d(1, 1, 1);
+			transform: scale3d(1, 1, 1);
+			height: 100%;
+			max-height: 100px;
+			width: 100%;
+		}
+
+		.demo-gallery>ul>li a:hover>img {
+			-webkit-transform: scale3d(1.1, 1.1, 1.1);
+			transform: scale3d(1.1, 1.1, 1.1);
+		}
+
+		.demo-gallery>ul>li a:hover .demo-gallery-poster>img {
+			opacity: 1;
+		}
+
+		.demo-gallery>ul>li a .demo-gallery-poster {
+			background-color: rgba(0, 0, 0, 0.1);
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			-webkit-transition: background-color 0.15s ease 0s;
+			-o-transition: background-color 0.15s ease 0s;
+			transition: background-color 0.15s ease 0s;
+		}
+
+		.demo-gallery>ul>li a .demo-gallery-poster>img {
+			left: 50%;
+			margin-left: -10px;
+			margin-top: -10px;
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			-webkit-transition: opacity 0.3s ease 0s;
+			-o-transition: opacity 0.3s ease 0s;
+			transition: opacity 0.3s ease 0s;
+		}
+
+		.demo-gallery>ul>li a:hover .demo-gallery-poster {
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		.demo-gallery .justified-gallery>a>img {
+			-webkit-transition: -webkit-transform 0.15s ease 0s;
+			-moz-transition: -moz-transform 0.15s ease 0s;
+			-o-transition: -o-transform 0.15s ease 0s;
+			transition: transform 0.15s ease 0s;
+			-webkit-transform: scale3d(1, 1, 1);
+			transform: scale3d(1, 1, 1);
+			height: 100%;
+			width: 100%;
+		}
+
+		.demo-gallery .justified-gallery>a:hover>img {
+			-webkit-transform: scale3d(1.1, 1.1, 1.1);
+			transform: scale3d(1.1, 1.1, 1.1);
+		}
+
+		.demo-gallery .justified-gallery>a:hover .demo-gallery-poster>img {
+			opacity: 1;
+		}
+
+		.demo-gallery .justified-gallery>a .demo-gallery-poster {
+			background-color: rgba(0, 0, 0, 0.1);
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			-webkit-transition: background-color 0.15s ease 0s;
+			-o-transition: background-color 0.15s ease 0s;
+			transition: background-color 0.15s ease 0s;
+		}
+
+		.demo-gallery .justified-gallery>a .demo-gallery-poster>img {
+			left: 50%;
+			margin-left: -10px;
+			margin-top: -10px;
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			-webkit-transition: opacity 0.3s ease 0s;
+			-o-transition: opacity 0.3s ease 0s;
+			transition: opacity 0.3s ease 0s;
+		}
+
+		.demo-gallery .justified-gallery>a:hover .demo-gallery-poster {
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		.demo-gallery .video .demo-gallery-poster img {
+			height: 48px;
+			margin-left: -24px;
+			margin-top: -24px;
+			opacity: 0.8;
+			width: 48px;
+		}
+
+		.demo-gallery.dark>ul>li a {
+			border: 3px solid #04070a;
+		}
+
+		.home .demo-gallery {
+			padding-bottom: 80px;
+		}
+
+
+		/* Fixed sidenav, full height */
+		.sidenav {
+			height: 100%;
+			width: 200px;
+			position: relative;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			background-color: #111;
+			overflow-x: hidden;
+			padding-top: 20px;
+		}
+
+		/* Style the sidenav links and the dropdown button */
+		.sidenav a,
+		.dropdown-btn {
+			padding: 6px 8px 6px 16px;
+			text-decoration: none;
+			font-size: 14px;
+			color: #818181;
+			display: block;
+			border: none;
+			background: none;
+			width: 100%;
+			text-align: left;
+			cursor: pointer;
+			outline: none;
+		}
+
+		/* On mouse-over */
+		.sidenav a:hover,.sidenav a:visited,.sidenav a:active,
+		.dropdown-btn:hover {
+			color: #f1f1f1;
+			text-decoration: none;
+		}
+
+		/* Add an active class to the active dropdown button */
+		.active {
+			background-color: rgb(224, 224, 224);
+			color: white;
+		}
+
+		/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+		.dropdown-container {
+			display: none;
+			background-color: #262626;
+			padding-left: 8px;
+		}
+
+		/* Optional: Style the caret down icon */
+		.fa-caret-down {
+			float: right;
+			padding-right: 8px;
+		}
+
+		/* Some media queries for responsiveness */
+		@media screen and (max-height: 450px) {
+			.sidenav {
+				padding-top: 15px;
+			}
+
+			.sidenav a {
+				font-size: 12px;
+			}
 		}
 	</style>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="js/lightslider.js"></script>
-	<script>
-		var slidersArray = [0, 1];
-		function showSlider(n) {
-			slidersArray.forEach(i => {
-				// $("#slider" + i).hide();
-				document.getElementById('slider' + i).style.display = 'none';
-				// $('#slider'+ i).css('display', 'none');
-			});
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-			document.getElementById('slider' + n).style.display = 'block';
-			// hide the lorem ipsum text
-			// setTimeout(() => {
-			// 	// $("#slider" + n).show();
-			// 	$('#slider'+ n).css('display', 'block');
-			// }, 1000);
-		}
-		$(document).ready(function () {
-			slidersArray.forEach(i => {
-				$("#slider" + i).hide();
-			});
-			$("#slider0").show();
-
-
-			$("#content-slider").lightSlider({
-				loop: true,
-				keyPress: true
-			});
-			$('#image-gallery0').lightSlider({
-				gallery: true,
-				item: 1,
-				thumbItem: 9,
-				slideMargin: 0,
-				speed: 500,
-				auto: true,
-				loop: true,
-				onSliderLoad: function () {
-					$('#image-gallery0').removeClass('cS-hidden');
-				}
-			});
-			$('#image-gallery1').lightSlider({
-				gallery: true,
-				item: 1,
-				thumbItem: 9,
-				slideMargin: 0,
-				speed: 500,
-				auto: true,
-				loop: true,
-				onSliderLoad: function () {
-					$('#image-gallery1').removeClass('cS-hidden');
-				}
-			});
-
-		});
-	</script>
 	<script src="js/main.js"></script>
 
 </head>
@@ -143,57 +263,159 @@
 	<div class="main_abputs" id="gallery">
 
 		<div class="row">
-			<div class="col-md-3">
-				<span onclick="showSlider(0)">Demo1</span>
-				<span onclick="showSlider(1)">Demo2</span>
+			<div class="col-md-3" style="padding: 0px 0px 0px 25px;">
+				<h3 class="gallery_header">CLIENT PROJECTS</h3>
+				<div class="sidenav">
+					<button class="dropdown-btn">LIFE STYLE THEATERS
+						<i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-container">
+						<a onclick="demo(0)" href="#">PROJECT 01</a>
+						<a onclick="demo(1)" href="#">PROJECT 02</a>
+						<a href="#">PROJECT 03</a>
+					</div>
+					<button class="dropdown-btn">PROFESSIONAL THEATERS
+						<i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-container">
+						<a onclick="demo(0)" href="#">PROJECT 01</a>
+						<a onclick="demo(1)" href="#">PROJECT 02</a>
+						<a href="#">PROJECT 03</a>
+					</div>
+				</div>
 			</div>
 			<div class="col-md-9">
-				<div class="demo" id="slider0">
-					<div class="item">
-						<div class="clearfix" style="max-width:600px;">
-							<ul id="image-gallery0" class="gallery list-unstyled cS-hidden">
-								<li data-thumb="images/gallery/acetech/01.jpg">
-									<img src="images/gallery/acetech/01.jpg" />
-								</li>
-								<li data-thumb="images/gallery/acetech/02.jpg">
-									<img src="images/gallery/acetech/02.jpg" />
-								</li>
-								<li data-thumb="images/gallery/acetech/03.jpg">
-									<img src="images/gallery/acetech/03.jpg" />
-								</li>
-								<li data-thumb="images/gallery/acetech/04.jpg">
-									<img src="images/gallery/acetech/04.jpg" />
-								</li>
-								<li data-thumb="images/gallery/acetech/05.jpg">
-									<img src="images/gallery/acetech/05.jpg" />
-								</li>
-							</ul>
-						</div>
-					</div>
+				<div class="demo-gallery">
+					<ul id="lightgallery0" class="list-unstyled row">
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/01.jpg"
+							data-src="images/gallery/acetech/01.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/01.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/02.jpg"
+							data-src="images/gallery/acetech/02.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/02.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/03.jpg"
+							data-src="images/gallery/acetech/03.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/03.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/04.jpg"
+							data-src="images/gallery/acetech/04.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/04.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/05.jpg"
+							data-src="images/gallery/acetech/05.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/05.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/06.jpg"
+							data-src="images/gallery/acetech/06.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/06.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/07.jpg"
+							data-src="images/gallery/acetech/07.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/07.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/08.jpg"
+							data-src="images/gallery/acetech/08.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/08.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/09.jpg"
+							data-src="images/gallery/acetech/09.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/09.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/10.jpg"
+							data-src="images/gallery/acetech/10.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/10.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/11.jpg"
+							data-src="images/gallery/acetech/11.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/11.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/12.jpg"
+							data-src="images/gallery/acetech/12.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/12.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/13.jpg"
+							data-src="images/gallery/acetech/13.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/13.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/14.jpg"
+							data-src="images/gallery/acetech/14.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/14.jpg">
+							</a>
+						</li>
+					</ul>
+
+					<!-- lightGallery 1  starts-->
+
+
+					<ul id="lightgallery1" class="list-unstyled row">
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/07.jpg"
+							data-src="images/gallery/acetech/07.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/07.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/08.jpg"
+							data-src="images/gallery/acetech/08.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/08.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/09.jpg"
+							data-src="images/gallery/acetech/09.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/09.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/10.jpg"
+							data-src="images/gallery/acetech/10.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/10.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/11.jpg"
+							data-src="images/gallery/acetech/11.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/11.jpg">
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/12.jpg"
+							data-src="images/gallery/acetech/12.jpg" data-sub-html="">
+							<a href="">
+								<img class="img-responsive" src="images/gallery/acetech/12.jpg">
+							</a>
+						</li>
+					</ul>
 				</div>
-				<div class="demo" id="slider1">
-					<div class="item">
-						<div class="clearfix" style="max-width:600px;">
-							<ul id="image-gallery1" class="gallery list-unstyled cS-hidden">
-								<li data-thumb="images/gallery/bangalore/01.jpg">
-									<img src="images/gallery/bangalore/01.jpg" />
-								</li>
-								<li data-thumb="images/gallery/bangalore/01.jpg">
-									<img src="images/gallery/bangalore/01.jpg" />
-								</li>
-								<li data-thumb="images/gallery/bangalore/01.jpg">
-									<img src="images/gallery/bangalore/01.jpg" />
-								</li>
-								<li data-thumb="images/gallery/bangalore/01.jpg">
-									<img src="images/gallery/bangalore/01.jpg" />
-								</li>
-								<li data-thumb="images/gallery/bangalore/01.jpg">
-									<img src="images/gallery/bangalore/01.jpg" />
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+
 			</div>
 		</div>
 	</div>
@@ -288,6 +510,37 @@
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/custome.css" rel="stylesheet">
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#lightgallery0').lightGallery();
+			$('#lightgallery1').lightGallery();
+
+			$('#lightgallery1').hide();
+		});
+
+		function demo(n) {
+			$("#lightgallery0,#lightgallery1").hide();
+			$("#lightgallery" + n).show();
+		}
+
+		/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+		var dropdown = document.getElementsByClassName("dropdown-btn");
+		var i;
+
+		for (i = 0; i < dropdown.length; i++) {
+			dropdown[i].addEventListener("click", function () {
+				this.classList.toggle("active");
+				var dropdownContent = this.nextElementSibling;
+				if (dropdownContent.style.display === "block") {
+					dropdownContent.style.display = "none";
+				} else {
+					dropdownContent.style.display = "block";
+				}
+			});
+		}
+	</script>
+	<!-- <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script> -->
+	<script src="js/lightgallery-all.min.js"></script>
 </body>
 
 </html>

@@ -325,6 +325,7 @@ nav.navbar.affix  ul.nav>li>a {
     /* text-transform: uppercase; */
     font-family: Poppins,sans-serif;
 }
+.gallery_header{color:#e4e0e0;font-weight:400;}
 .newb_header:after {}
 .new_align .main_paragr{color:#e4e0e0;font-weight:400;}
 .new_align .main_paragr1{color:#d6d5d5;}
