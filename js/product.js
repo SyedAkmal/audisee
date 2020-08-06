@@ -91,6 +91,29 @@ $('#product_slide').owlCarousel({
     "<i class='fa fa-caret-left'></i>",
     "<i class='fa fa-caret-right'></i>"
   ],
+  autoplay: true,
+  autoplayHoverPause: false,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    1000: {
+      items: 3
+    }
+  }
+})
+
+$('#features_slide').owlCarousel({
+  loop: false,
+  margin: 10,
+  nav: true,
+  navText: [
+    "<i class='fa fa-caret-left'></i>",
+    "<i class='fa fa-caret-right'></i>"
+  ],
   autoplay: false,
   autoplayHoverPause: true,
   responsive: {
@@ -101,7 +124,7 @@ $('#product_slide').owlCarousel({
       items: 2
     },
     1000: {
-      items: 3
+      items: 4
     }
   }
 })

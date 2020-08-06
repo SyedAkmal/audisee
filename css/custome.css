@@ -2461,7 +2461,7 @@ body.lb-disable-scrolling {
     display: none;
 }
 
-.main_servse .owl-nav i {
+.main_servse .owl-nav i , .main_abput2 .owl-nav i{
     font-size: 40px;
     display: block;
     color: #666;
