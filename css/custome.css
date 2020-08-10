@@ -695,7 +695,11 @@ nav.navbar.affix ul.nav>li>a {
     padding: 10% 0 0px;
     overflow-x: auto;
 }
-
+.prod_icons :hover{
+    background-color: rgba(255, 255, 255, 0.863);
+    cursor: pointer;
+    zoom: 1.02;
+}
 .prod_icons>li {
     margin: 10px;
     align-self: baseline;

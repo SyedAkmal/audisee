@@ -226,6 +226,7 @@
 		}
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/sampslider.js"></script>
 
 	<script src="js/main.js"></script>
 
@@ -248,7 +249,7 @@
 							<div class="collapse navbar-collapse" id="navbar-menu">
 								<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 									<li><a href="index.html#aboutus">About Us</a></li>
-									<li class="dropdown"><a href="index.html#products" class="dropdown-toggle"
+									<li class="dropdown"><a href="products.html" class="dropdown-toggle"
 											data-toggle="dropdown" role="button" aria-haspopup="true"
 											aria-expanded="true"> <span class="nav-label">Products</span>
 											<!-- <span class="caret"></span> -->
@@ -276,6 +277,16 @@
 			<div class="row">
 				<img src="images/sub_projects.jpg" />
 			</div>
+			<!-- <div id="demo" class="samp-slider samp-slider-mask">
+				<ul class="samp-container-horizontal">
+					<li class="samp-container"><img src="images/gallery/projects/lifestyle/01/01.jpg"></li>
+					<li class="samp-container"><img src="images/gallery/projects/lifestyle/01/01.jpg"></li>
+					<li class="samp-container"><img src="images/gallery/projects/lifestyle/01/01.jpg"></li>
+					<li class="samp-container"><img src="images/gallery/projects/lifestyle/01/01.jpg"></li>
+					<li class="samp-container"><img src="images/gallery/projects/lifestyle/01/01.jpg"></li>
+					<li class="samp-container"><img src="images/gallery/projects/lifestyle/01/01.jpg"></li>
+				</ul>
+			</div> -->
 		</div>
 		<div class="row">
 			<div class="col-md-9 col-xs-9">
@@ -1671,6 +1682,7 @@
 	<script src="js/menubar.js"></script>
 	<a href="index.html#0" class="cd-top">Top</a>
 
+	<link href="css/sampslider.css" rel="stylesheet">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/custome.css" rel="stylesheet">
 	<script type="text/javascript">
@@ -1748,6 +1760,54 @@
 				}
 			});
 		}
+
+		$('#demo').sampSlider({
+
+			// // auto size images
+			// autosize: true,
+
+			// // width of the slideshow
+			// width: 900,
+
+			// // width overrides height with aspect ratio
+			// height: 600,
+
+			// // overrides autosize. when false it is calculated
+			// aspectratio: false,
+
+			// // 0 or delay in milliseconds
+			// autoplay: 0,
+
+			// // true to show drag-navi
+			// dragonbar: false,
+
+			// // true to show arrows navigation
+			// arrows: true,
+
+			// // infinite loop
+			// loop: true,
+
+			// // slide speed
+			// slidespeed: 500,
+
+			// // 1 and up
+			// startslide: 1,
+
+			// // if automatically scroll to top of slider
+			// gototop: false,
+
+			// // called before image switch 
+			// beforeslide: null,
+
+			// // called after image switch
+			// afterslide: null,
+
+			// // callback
+			// afterinit: function () {
+			// 	console.log('Vroom.');
+			// }
+
+		});
 	</script>
 	<script src="js/lightgallery-all.min.js"></script>
 </body>
