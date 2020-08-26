@@ -11,6 +11,8 @@
 
 	<link href="css/lightgallery.css" rel="stylesheet">
 	<style type="text/css">
+		@import "css/flexslider.css";
+
 		body {
 			background-color: #152836
 		}
@@ -224,6 +226,14 @@
 				font-size: 10px;
 			}
 		}
+
+		#initSlider {
+			width: 800px;
+			margin: 0px 20px 0px 150px;
+			padding: 0px 0px 10px 0px;
+			height: 500px;
+			float: left;
+		}
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="js/sampslider.js"></script>
@@ -291,6 +301,35 @@
 		<div class="row">
 			<div class="col-md-9 col-xs-9">
 				<h4 id="projname" class="gallery_header_pname"></h4>
+				<div id="initSlider">
+					<div class="flexslider">
+						<ul class="slides">
+							<li><img src="images/gallery/projects/lifestyle/01/02.jpg" class="img-responsive"
+									alt="Audisee" />
+							</li>
+							<li><img src="images/gallery/projects/lifestyle/02/01.jpg" class="img-responsive"
+									alt="Audisee" />
+							</li>
+							<li><img src="images/gallery/projects/lifestyle/04/03.jpg" class="img-responsive"
+									alt="Audisee" />
+							</li>
+							<li><img src="images/gallery/projects/lifestyle/05/04.jpg" class="img-responsive"
+									alt="Audisee" />
+							</li>
+							<li><img src="images/gallery/projects/professional/01/07.jpg" class="img-responsive"
+									alt="Audisee" /></li>
+							<li><img src="images/gallery/projects/professional/02/04.jpg" class="img-responsive"
+									alt="Audisee" /></li>
+							<li><img src="images/gallery/projects/professional/03/01.jpg" class="img-responsive"
+									alt="Audisee" /></li>
+							<li><img src="images/gallery/projects/professional/04/01.jpg" class="img-responsive"
+									alt="Audisee" /></li>
+							<li><img src="images/gallery/projects/distributed/02/06.jpg" class="img-responsive"
+									alt="Audisee" /></li>
+						</ul>
+					</div>
+
+				</div>
 				<div class="demo-gallery">
 					<ul id="lightgallery_LST1" class="list-unstyled row">
 						<li class="col-xs-6 col-sm-4 col-md-3"
@@ -1685,12 +1724,23 @@
 	<link href="css/sampslider.css" rel="stylesheet">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/custome.css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
 	<script type="text/javascript">
 		var LSTprojects = [1, 2, 3, 4, 5, 6, 7];
 		var PROFprojects = [1, 2, 3, 4, 5, 6, 7];
 		var DISTprojects = [1, 2];
 		var BNG, CMB, UBC, ACE;
 		BNG = CMB = UBC = ACE = [1];
+
+		$(window).load(function () {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function (slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+
 		$(document).ready(function () {
 			LSTprojects.forEach(p => {
 				$("#lightgallery_LST" + p).lightGallery();
@@ -1710,10 +1760,11 @@
 			$("#lightgallery_ACE1").lightGallery().hide();
 			$("#lightgallery_UBC1").lightGallery().hide();
 			$("#projname").html("Life Style Theaters - Project 1");
-			$("#lightgallery_LST1").show();
+			// $("#lightgallery_LST1").show();
 		});
 
 		function demo(n, t) {
+			$("#initSlider").hide();
 			for (var i = 1, len = LSTprojects.length; i <= len; i++) {
 				$("#lightgallery_LST" + i).hide();
 			}
