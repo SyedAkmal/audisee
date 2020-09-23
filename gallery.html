@@ -2,292 +2,295 @@
 <html lang="en">
 
 <head>
-	<title>Auddisee</title>
-	<link rel="shortcut icon" href="favicon.ico" />
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="">
-	<link href="css/base.css" rel="stylesheet">
+    <title>Auddisee</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <link href="css/base.css" rel="stylesheet">
 
-	<link href="css/lightgallery.css" rel="stylesheet">
-	<style type="text/css">
-		@import "css/flexslider.css";
-
-		body {
-			background-color: #152836
-		}
-
-		/* .demo-gallery {
+    <link href="css/lightgallery.css" rel="stylesheet">
+    <style type="text/css">
+        @import "css/flexslider.css";
+        body {
+            background-color: #152836
+        }
+        /* .demo-gallery {
 			padding-top: 25px;
 		} */
+        
+        .demo-gallery>ul {
+            margin-bottom: 0;
+        }
+        
+        .demo-gallery>ul>li {
+            float: left;
+            margin-bottom: 10px;
+            margin-right: 0px;
+            padding: 0 5px 0 5px;
+            width: 200px;
+        }
+        
+        .demo-gallery>ul>li a {
+            /* border: 3px solid #FFF; */
+            box-shadow: 0px 0px 5px 3px #eae4e4;
+            border-radius: 3px;
+            display: block;
+            overflow: hidden;
+            position: relative;
+            float: left;
+        }
+        
+        .demo-gallery>ul>li a>img {
+            -webkit-transition: -webkit-transform 0.15s ease 0s;
+            -moz-transition: -moz-transform 0.15s ease 0s;
+            -o-transition: -o-transform 0.15s ease 0s;
+            transition: transform 0.15s ease 0s;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+            height: 100%;
+            max-height: 100px;
+            width: 100%;
+        }
+        
+        .demo-gallery>ul>li a:hover>img {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+        
+        .demo-gallery>ul>li a:hover .demo-gallery-poster>img {
+            opacity: 1;
+        }
+        
+        .demo-gallery>ul>li a .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.1);
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            -webkit-transition: background-color 0.15s ease 0s;
+            -o-transition: background-color 0.15s ease 0s;
+            transition: background-color 0.15s ease 0s;
+        }
+        
+        .demo-gallery>ul>li a .demo-gallery-poster>img {
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            -webkit-transition: opacity 0.3s ease 0s;
+            -o-transition: opacity 0.3s ease 0s;
+            transition: opacity 0.3s ease 0s;
+        }
+        
+        .demo-gallery>ul>li a:hover .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .demo-gallery .justified-gallery>a>img {
+            -webkit-transition: -webkit-transform 0.15s ease 0s;
+            -moz-transition: -moz-transform 0.15s ease 0s;
+            -o-transition: -o-transform 0.15s ease 0s;
+            transition: transform 0.15s ease 0s;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+            height: 100%;
+            width: 100%;
+        }
+        
+        .demo-gallery .justified-gallery>a:hover>img {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+        
+        .demo-gallery .justified-gallery>a:hover .demo-gallery-poster>img {
+            opacity: 1;
+        }
+        
+        .demo-gallery .justified-gallery>a .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.1);
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            -webkit-transition: background-color 0.15s ease 0s;
+            -o-transition: background-color 0.15s ease 0s;
+            transition: background-color 0.15s ease 0s;
+        }
+        
+        .demo-gallery .justified-gallery>a .demo-gallery-poster>img {
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            -webkit-transition: opacity 0.3s ease 0s;
+            -o-transition: opacity 0.3s ease 0s;
+            transition: opacity 0.3s ease 0s;
+        }
+        
+        .demo-gallery .justified-gallery>a:hover .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .demo-gallery .video .demo-gallery-poster img {
+            height: 48px;
+            margin-left: -24px;
+            margin-top: -24px;
+            opacity: 0.8;
+            width: 48px;
+        }
+        
+        .demo-gallery.dark>ul>li a {
+            border: 3px solid #04070a;
+        }
+        
+        .home .demo-gallery {
+            padding-bottom: 80px;
+        }
+        /* Fixed sidenav, full height */
+        
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: relative;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 5px;
+        }
+        /* Style the sidenav links and the dropdown button */
+        
+        .sidenav a,
+        .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 10px;
+            color: #dadada;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        /* On mouse-over */
+        
+        .sidenav a:hover,
+        .sidenav a:visited,
+        .sidenav a:active,
+        .dropdown-btn:hover {
+            color: #ffffff;
+            background: #c7c7c7;
+            text-decoration: none;
+            font-size: 10px;
+        }
+        /* Add an active class to the active dropdown button */
+        
+        .active {
+            background-color: rgb(224, 224, 224);
+            color: #191818;
+        }
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+        
+        .dropdown-container {
+            display: none;
+            background-color: #262626;
+            padding-left: 8px;
+        }
+        /* Optional: Style the caret down icon */
+        
+        .fa-caret-down {
+            float: right;
+            padding-right: 8px;
+        }
+        /* Some media queries for responsiveness */
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 10px;
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .overflow {
+                overflow: overlay;
+            }
+        }
+        
+        .overflow {
+            overflow: hidden;
+        }
+        
+        #initSlider {
+            width: 800px;
+            margin: 0px 20px 0px 150px;
+            padding: 0px 0px 10px 0px;
+            height: 500px;
+            float: left;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/sampslider.js"></script>
 
-		.demo-gallery>ul {
-			margin-bottom: 0;
-		}
-
-		.demo-gallery>ul>li {
-			float: left;
-			margin-bottom: 10px;
-			margin-right: 0px;
-			padding: 0 5px 0 5px;
-			width: 200px;
-		}
-
-		.demo-gallery>ul>li a {
-			/* border: 3px solid #FFF; */
-			box-shadow: 0px 0px 5px 3px #eae4e4;
-			border-radius: 3px;
-			display: block;
-			overflow: hidden;
-			position: relative;
-			float: left;
-		}
-
-		.demo-gallery>ul>li a>img {
-			-webkit-transition: -webkit-transform 0.15s ease 0s;
-			-moz-transition: -moz-transform 0.15s ease 0s;
-			-o-transition: -o-transform 0.15s ease 0s;
-			transition: transform 0.15s ease 0s;
-			-webkit-transform: scale3d(1, 1, 1);
-			transform: scale3d(1, 1, 1);
-			height: 100%;
-			max-height: 100px;
-			width: 100%;
-		}
-
-		.demo-gallery>ul>li a:hover>img {
-			-webkit-transform: scale3d(1.1, 1.1, 1.1);
-			transform: scale3d(1.1, 1.1, 1.1);
-		}
-
-		.demo-gallery>ul>li a:hover .demo-gallery-poster>img {
-			opacity: 1;
-		}
-
-		.demo-gallery>ul>li a .demo-gallery-poster {
-			background-color: rgba(0, 0, 0, 0.1);
-			bottom: 0;
-			left: 0;
-			position: absolute;
-			right: 0;
-			top: 0;
-			-webkit-transition: background-color 0.15s ease 0s;
-			-o-transition: background-color 0.15s ease 0s;
-			transition: background-color 0.15s ease 0s;
-		}
-
-		.demo-gallery>ul>li a .demo-gallery-poster>img {
-			left: 50%;
-			margin-left: -10px;
-			margin-top: -10px;
-			opacity: 0;
-			position: absolute;
-			top: 50%;
-			-webkit-transition: opacity 0.3s ease 0s;
-			-o-transition: opacity 0.3s ease 0s;
-			transition: opacity 0.3s ease 0s;
-		}
-
-		.demo-gallery>ul>li a:hover .demo-gallery-poster {
-			background-color: rgba(0, 0, 0, 0.5);
-		}
-
-		.demo-gallery .justified-gallery>a>img {
-			-webkit-transition: -webkit-transform 0.15s ease 0s;
-			-moz-transition: -moz-transform 0.15s ease 0s;
-			-o-transition: -o-transform 0.15s ease 0s;
-			transition: transform 0.15s ease 0s;
-			-webkit-transform: scale3d(1, 1, 1);
-			transform: scale3d(1, 1, 1);
-			height: 100%;
-			width: 100%;
-		}
-
-		.demo-gallery .justified-gallery>a:hover>img {
-			-webkit-transform: scale3d(1.1, 1.1, 1.1);
-			transform: scale3d(1.1, 1.1, 1.1);
-		}
-
-		.demo-gallery .justified-gallery>a:hover .demo-gallery-poster>img {
-			opacity: 1;
-		}
-
-		.demo-gallery .justified-gallery>a .demo-gallery-poster {
-			background-color: rgba(0, 0, 0, 0.1);
-			bottom: 0;
-			left: 0;
-			position: absolute;
-			right: 0;
-			top: 0;
-			-webkit-transition: background-color 0.15s ease 0s;
-			-o-transition: background-color 0.15s ease 0s;
-			transition: background-color 0.15s ease 0s;
-		}
-
-		.demo-gallery .justified-gallery>a .demo-gallery-poster>img {
-			left: 50%;
-			margin-left: -10px;
-			margin-top: -10px;
-			opacity: 0;
-			position: absolute;
-			top: 50%;
-			-webkit-transition: opacity 0.3s ease 0s;
-			-o-transition: opacity 0.3s ease 0s;
-			transition: opacity 0.3s ease 0s;
-		}
-
-		.demo-gallery .justified-gallery>a:hover .demo-gallery-poster {
-			background-color: rgba(0, 0, 0, 0.5);
-		}
-
-		.demo-gallery .video .demo-gallery-poster img {
-			height: 48px;
-			margin-left: -24px;
-			margin-top: -24px;
-			opacity: 0.8;
-			width: 48px;
-		}
-
-		.demo-gallery.dark>ul>li a {
-			border: 3px solid #04070a;
-		}
-
-		.home .demo-gallery {
-			padding-bottom: 80px;
-		}
-
-
-		/* Fixed sidenav, full height */
-		.sidenav {
-			height: 100%;
-			width: 200px;
-			position: relative;
-			z-index: 1;
-			top: 0;
-			left: 0;
-			background-color: #111;
-			overflow-x: hidden;
-			padding-top: 5px;
-		}
-
-		/* Style the sidenav links and the dropdown button */
-		.sidenav a,
-		.dropdown-btn {
-			padding: 6px 8px 6px 16px;
-			text-decoration: none;
-			font-size: 10px;
-			color: #dadada;
-			display: block;
-			border: none;
-			background: none;
-			width: 100%;
-			text-align: left;
-			cursor: pointer;
-			outline: none;
-		}
-
-		/* On mouse-over */
-		.sidenav a:hover,
-		.sidenav a:visited,
-		.sidenav a:active,
-		.dropdown-btn:hover {
-			color: #ffffff;
-			background: #c7c7c7;
-			text-decoration: none;
-			font-size: 10px;
-		}
-
-		/* Add an active class to the active dropdown button */
-		.active {
-			background-color: rgb(224, 224, 224);
-			color: #191818;
-		}
-
-		/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-		.dropdown-container {
-			display: none;
-			background-color: #262626;
-			padding-left: 8px;
-		}
-
-		/* Optional: Style the caret down icon */
-		.fa-caret-down {
-			float: right;
-			padding-right: 8px;
-		}
-
-		/* Some media queries for responsiveness */
-		@media screen and (max-height: 450px) {
-			.sidenav {
-				padding-top: 15px;
-			}
-
-			.sidenav a {
-				font-size: 10px;
-			}
-		}
-
-		#initSlider {
-			width: 800px;
-			margin: 0px 20px 0px 150px;
-			padding: 0px 0px 10px 0px;
-			height: 500px;
-			float: left;
-		}
-	</style>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="js/sampslider.js"></script>
-
-	<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 
 </head>
 
 <body>
 
-	<div class="full_banner">
-		<header class="main_navbar">
-			<nav class="navbar navbar-default bootsnav" data-spy="affix" data-offset-top="197">
-				<div class="container menubg">
-					<div class="row">
-						<div class="menubg_algn">
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle" data-toggle="collapse"
-									data-target="#navbar-menu"><i class="fa fa-bars"></i></button>
-								<a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo_mwidth"
-										alt=""></a>
-							</div>
-							<div class="collapse navbar-collapse" id="navbar-menu">
-								<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-									<li><a href="index.html#aboutus">About Us</a></li>
-									<li class="dropdown"><a href="products.html" class="dropdown-toggle"
-											data-toggle="dropdown" role="button" aria-haspopup="true"
-											aria-expanded="true"> <span class="nav-label">Products</span>
-											<!-- <span class="caret"></span> -->
-										</a>
-										<!-- <ul class="dropdown-menu">
+    <div class="full_banner">
+        <header class="main_navbar">
+            <nav class="navbar navbar-default bootsnav" data-spy="affix" data-offset-top="197">
+                <div class="container menubg">
+                    <div class="row">
+                        <div class="menubg_algn">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i class="fa fa-bars"></i></button>
+                                <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo_mwidth" alt=""></a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="navbar-menu">
+                                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                                    <li><a href="index.html#aboutus">About Us</a></li>
+                                    <li class="dropdown">
+                                        <a href="products.html" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Products</span>
+                                            <!-- <span class="caret"></span> -->
+                                        </a>
+                                        <!-- <ul class="dropdown-menu">
 										<li><a href="products.html">All</a></li>
 										<li><a href="acoustic.html">Acoustics</a></li>
 									</ul> -->
-									</li>
-									<li><a href="index.html#features">Features</a></li>
-									<li><a href="services.html">Services</a></li>
-									<li><a href="services.html#news">News</a></li>
-									<li><a href="gallery.html">Projects-Gallery</a></li>
-									<li><a href="contact.html">Contact Us</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</header>
-	</div>
-	<div class="main_abputs" id="gallery">
-		<div class="container">
-			<div class="row">
-				<img src="images/sub_projects.jpg" />
-			</div>
-			<!-- <div id="demo" class="samp-slider samp-slider-mask">
+                                    </li>
+                                    <li><a href="index.html#features">Features</a></li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="services.html#news">News</a></li>
+                                    <li><a href="gallery.html">Projects-Gallery</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="main_abputs" id="gallery">
+        <div class="container">
+            <div class="row">
+                <img class="col-xs-12" src="images/sub_projects.jpg" />
+            </div>
+            <!-- <div id="demo" class="samp-slider samp-slider-mask">
 				<ul class="samp-container-horizontal">
 					<li class="samp-container"><img src="images/gallery/projects/lifestyle/01/01.jpg"></li>
 					<li class="samp-container"><img src="images/gallery/projects/lifestyle/01/01.jpg"></li>
@@ -297,1404 +300,1107 @@
 					<li class="samp-container"><img src="images/gallery/projects/lifestyle/01/01.jpg"></li>
 				</ul>
 			</div> -->
-		</div>
-		<div class="row">
-			<div class="col-md-9 col-xs-9">
-				<h4 id="projname" class="gallery_header_pname"></h4>
-				<div id="initSlider">
-					<div class="flexslider">
-						<ul class="slides">
-							<li><img src="images/gallery/projects/lifestyle/01/02.jpg" class="img-responsive"
-									alt="Audisee" />
-							</li>
-							<li><img src="images/gallery/projects/lifestyle/02/01.jpg" class="img-responsive"
-									alt="Audisee" />
-							</li>
-							<li><img src="images/gallery/projects/lifestyle/04/03.jpg" class="img-responsive"
-									alt="Audisee" />
-							</li>
-							<li><img src="images/gallery/projects/lifestyle/05/04.jpg" class="img-responsive"
-									alt="Audisee" />
-							</li>
-							<li><img src="images/gallery/projects/professional/01/07.jpg" class="img-responsive"
-									alt="Audisee" /></li>
-							<li><img src="images/gallery/projects/professional/02/04.jpg" class="img-responsive"
-									alt="Audisee" /></li>
-							<li><img src="images/gallery/projects/professional/03/01.jpg" class="img-responsive"
-									alt="Audisee" /></li>
-							<li><img src="images/gallery/projects/professional/04/01.jpg" class="img-responsive"
-									alt="Audisee" /></li>
-							<li><img src="images/gallery/projects/distributed/02/06.jpg" class="img-responsive"
-									alt="Audisee" /></li>
-						</ul>
-					</div>
+        </div>
+        <div class="row">
+            <div class="col-md-9 col-xs-9 overflow">
+                <h4 id="projname" class="gallery_header_pname"></h4>
+                <div class="col-xs-6" id="initSlider">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li><img src="images/gallery_init_images/01.jpg" class="img-responsive" alt="Audisee" />
+                            </li>
+                            <li><img src="images/gallery_init_images/02.jpg" class="img-responsive" alt="Audisee" />
+                            </li>
+                            <li><img src="images/gallery_init_images/03.jpg" class="img-responsive" alt="Audisee" />
+                            </li>
+                            <li><img src="images/gallery_init_images/04.jpg" class="img-responsive" alt="Audisee" />
+                            </li>
+                            <li><img src="images/gallery_init_images/05.jpg" class="img-responsive" alt="Audisee" /></li>
+                            <li><img src="images/gallery_init_images/06.jpg" class="img-responsive" alt="Audisee" /></li>
+                            <li><img src="images/gallery_init_images/07.jpg" class="img-responsive" alt="Audisee" /></li>
+                            <li><img src="images/gallery_init_images/08.jpg" class="img-responsive" alt="Audisee" /></li>
+                            <li><img src="images/gallery_init_images/09.jpg" class="img-responsive" alt="Audisee" /></li>
+                            <li><img src="images/gallery_init_images/10.jpg" class="img-responsive" alt="Audisee" /></li>
+                        </ul>
+                    </div>
 
-				</div>
-				<div class="demo-gallery">
-					<ul id="lightgallery_LST1" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/01/01.jpg"
-							data-src="images/gallery/projects/lifestyle/01/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/01/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/01/02.jpg"
-							data-src="images/gallery/projects/lifestyle/01/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/01/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/01/03.jpg"
-							data-src="images/gallery/projects/lifestyle/01/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/01/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/01/04.jpg"
-							data-src="images/gallery/projects/lifestyle/01/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/01/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/01/05.jpg"
-							data-src="images/gallery/projects/lifestyle/01/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/01/05.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/01/06.jpg"
-							data-src="images/gallery/projects/lifestyle/01/06.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/01/06.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/01/07.jpg"
-							data-src="images/gallery/projects/lifestyle/01/07.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/01/07.jpg">
-							</a>
-						</li>
-					</ul>
+                </div>
+                <div class="demo-gallery">
+                    <ul id="lightgallery_LST1" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/01/01.jpg" data-src="images/gallery/projects/lifestyle/01/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/01/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/01/02.jpg" data-src="images/gallery/projects/lifestyle/01/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/01/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/01/03.jpg" data-src="images/gallery/projects/lifestyle/01/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/01/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/01/04.jpg" data-src="images/gallery/projects/lifestyle/01/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/01/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/01/05.jpg" data-src="images/gallery/projects/lifestyle/01/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/01/05.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/01/06.jpg" data-src="images/gallery/projects/lifestyle/01/06.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/01/06.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/01/07.jpg" data-src="images/gallery/projects/lifestyle/01/07.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/01/07.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
-					<!-- lightGallery 1  starts-->
+                    <!-- lightGallery 1  starts-->
 
 
-					<ul id="lightgallery_LST2" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/02/01.jpg"
-							data-src="images/gallery/projects/lifestyle/02/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/02/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/02/02.jpg"
-							data-src="images/gallery/projects/lifestyle/02/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/02/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/02/03.jpg"
-							data-src="images/gallery/projects/lifestyle/02/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/02/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/02/04.jpg"
-							data-src="images/gallery/projects/lifestyle/02/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/02/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/02/05.jpg"
-							data-src="images/gallery/projects/lifestyle/02/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/02/05.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/02/06.jpg"
-							data-src="images/gallery/projects/lifestyle/02/06.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/02/06.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/02/07.jpg"
-							data-src="images/gallery/projects/lifestyle/02/07.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/02/07.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/02/08.jpg"
-							data-src="images/gallery/projects/lifestyle/02/08.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/02/08.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/02/09.jpg"
-							data-src="images/gallery/projects/lifestyle/02/09.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/02/09.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/02/10.jpg"
-							data-src="images/gallery/projects/lifestyle/02/10.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/02/10.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_LST2" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/02/01.jpg" data-src="images/gallery/projects/lifestyle/02/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/02/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/02/02.jpg" data-src="images/gallery/projects/lifestyle/02/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/02/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/02/03.jpg" data-src="images/gallery/projects/lifestyle/02/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/02/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/02/04.jpg" data-src="images/gallery/projects/lifestyle/02/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/02/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/02/05.jpg" data-src="images/gallery/projects/lifestyle/02/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/02/05.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/02/06.jpg" data-src="images/gallery/projects/lifestyle/02/06.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/02/06.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/02/07.jpg" data-src="images/gallery/projects/lifestyle/02/07.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/02/07.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/02/08.jpg" data-src="images/gallery/projects/lifestyle/02/08.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/02/08.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/02/09.jpg" data-src="images/gallery/projects/lifestyle/02/09.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/02/09.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/02/10.jpg" data-src="images/gallery/projects/lifestyle/02/10.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/02/10.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
 
-					<ul id="lightgallery_LST3" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/03/01.jpg"
-							data-src="images/gallery/projects/lifestyle/03/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/03/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/03/02.jpg"
-							data-src="images/gallery/projects/lifestyle/03/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/03/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/03/04.jpg"
-							data-src="images/gallery/projects/lifestyle/03/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/03/04.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_LST3" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/03/01.jpg" data-src="images/gallery/projects/lifestyle/03/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/03/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/03/02.jpg" data-src="images/gallery/projects/lifestyle/03/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/03/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/03/04.jpg" data-src="images/gallery/projects/lifestyle/03/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/03/04.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
 
 
 
-					<ul id="lightgallery_LST4" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/04/01.jpg"
-							data-src="images/gallery/projects/lifestyle/04/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/04/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/04/02.jpg"
-							data-src="images/gallery/projects/lifestyle/04/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/04/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/04/03.jpg"
-							data-src="images/gallery/projects/lifestyle/04/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/04/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/04/04.jpg"
-							data-src="images/gallery/projects/lifestyle/04/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/04/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/04/05.jpg"
-							data-src="images/gallery/projects/lifestyle/04/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/04/05.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/04/06.jpg"
-							data-src="images/gallery/projects/lifestyle/04/06.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/04/06.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/04/07.jpg"
-							data-src="images/gallery/projects/lifestyle/04/07.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/04/07.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/04/08.jpg"
-							data-src="images/gallery/projects/lifestyle/04/08.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/04/08.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_LST4" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/04/01.jpg" data-src="images/gallery/projects/lifestyle/04/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/04/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/04/02.jpg" data-src="images/gallery/projects/lifestyle/04/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/04/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/04/03.jpg" data-src="images/gallery/projects/lifestyle/04/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/04/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/04/04.jpg" data-src="images/gallery/projects/lifestyle/04/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/04/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/04/05.jpg" data-src="images/gallery/projects/lifestyle/04/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/04/05.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/04/06.jpg" data-src="images/gallery/projects/lifestyle/04/06.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/04/06.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/04/07.jpg" data-src="images/gallery/projects/lifestyle/04/07.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/04/07.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/04/08.jpg" data-src="images/gallery/projects/lifestyle/04/08.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/04/08.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
 
-					<ul id="lightgallery_LST5" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/05/01.jpg"
-							data-src="images/gallery/projects/lifestyle/05/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/05/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/05/02.jpg"
-							data-src="images/gallery/projects/lifestyle/05/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/05/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/05/03.jpg"
-							data-src="images/gallery/projects/lifestyle/05/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/05/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/05/04.jpg"
-							data-src="images/gallery/projects/lifestyle/05/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/05/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/05/05.jpg"
-							data-src="images/gallery/projects/lifestyle/05/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/05/05.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_LST5" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/05/01.jpg" data-src="images/gallery/projects/lifestyle/05/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/05/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/05/02.jpg" data-src="images/gallery/projects/lifestyle/05/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/05/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/05/03.jpg" data-src="images/gallery/projects/lifestyle/05/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/05/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/05/04.jpg" data-src="images/gallery/projects/lifestyle/05/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/05/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/05/05.jpg" data-src="images/gallery/projects/lifestyle/05/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/05/05.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
-					<ul id="lightgallery_LST6" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/06/01.jpg"
-							data-src="images/gallery/projects/lifestyle/06/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/06/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/06/02.jpg"
-							data-src="images/gallery/projects/lifestyle/06/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/06/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/06/03.jpg"
-							data-src="images/gallery/projects/lifestyle/06/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/06/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/06/04.jpg"
-							data-src="images/gallery/projects/lifestyle/06/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/06/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/06/05.jpg"
-							data-src="images/gallery/projects/lifestyle/06/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/06/05.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/06/06.jpg"
-							data-src="images/gallery/projects/lifestyle/06/06.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/06/06.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_LST6" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/06/01.jpg" data-src="images/gallery/projects/lifestyle/06/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/06/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/06/02.jpg" data-src="images/gallery/projects/lifestyle/06/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/06/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/06/03.jpg" data-src="images/gallery/projects/lifestyle/06/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/06/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/06/04.jpg" data-src="images/gallery/projects/lifestyle/06/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/06/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/06/05.jpg" data-src="images/gallery/projects/lifestyle/06/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/06/05.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/06/06.jpg" data-src="images/gallery/projects/lifestyle/06/06.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/06/06.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
 
 
-					<ul id="lightgallery_LST7" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/07/01.jpg"
-							data-src="images/gallery/projects/lifestyle/07/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/07/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/07/03.jpg"
-							data-src="images/gallery/projects/lifestyle/07/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/07/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/07/04.jpg"
-							data-src="images/gallery/projects/lifestyle/07/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/07/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/lifestyle/07/05.jpg"
-							data-src="images/gallery/projects/lifestyle/07/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/lifestyle/07/05.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_LST7" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/07/01.jpg" data-src="images/gallery/projects/lifestyle/07/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/07/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/07/03.jpg" data-src="images/gallery/projects/lifestyle/07/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/07/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/07/04.jpg" data-src="images/gallery/projects/lifestyle/07/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/07/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/lifestyle/07/05.jpg" data-src="images/gallery/projects/lifestyle/07/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/lifestyle/07/05.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
 
-					<ul id="lightgallery_PROF1" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/01/01.jpg"
-							data-src="images/gallery/projects/professional/01/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/professional/01/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/01/02.jpg"
-							data-src="images/gallery/projects//professional/01/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/01/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/01/03.jpg"
-							data-src="images/gallery/projects//professional/01/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/01/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/01/04.jpg"
-							data-src="images/gallery/projects//professional/01/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/01/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/01/05.jpg"
-							data-src="images/gallery/projects//professional/01/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/01/05.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/01/06.jpg"
-							data-src="images/gallery/projects/professional/01/06.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/professional/01/06.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/01/07.jpg"
-							data-src="images/gallery/projects//professional/01/07.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/01/07.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/01/08.jpg"
-							data-src="images/gallery/projects//professional/01/08.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/01/08.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/01/09.jpg"
-							data-src="images/gallery/projects//professional/01/09.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/01/09.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/01/10.jpg"
-							data-src="images/gallery/projects//professional/01/10.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/01/10.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/01/11.jpg"
-							data-src="images/gallery/projects//professional/01/11.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/01/11.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/01/12.jpg"
-							data-src="images/gallery/projects//professional/01/12.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/01/12.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/01/13.jpg"
-							data-src="images/gallery/projects//professional/01/13.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/01/13.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_PROF1" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/01/01.jpg" data-src="images/gallery/projects/professional/01/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/professional/01/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/01/02.jpg" data-src="images/gallery/projects//professional/01/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/01/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/01/03.jpg" data-src="images/gallery/projects//professional/01/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/01/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/01/04.jpg" data-src="images/gallery/projects//professional/01/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/01/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/01/05.jpg" data-src="images/gallery/projects//professional/01/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/01/05.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/01/06.jpg" data-src="images/gallery/projects/professional/01/06.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/professional/01/06.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/01/07.jpg" data-src="images/gallery/projects//professional/01/07.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/01/07.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/01/08.jpg" data-src="images/gallery/projects//professional/01/08.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/01/08.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/01/09.jpg" data-src="images/gallery/projects//professional/01/09.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/01/09.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/01/10.jpg" data-src="images/gallery/projects//professional/01/10.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/01/10.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/01/11.jpg" data-src="images/gallery/projects//professional/01/11.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/01/11.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/01/12.jpg" data-src="images/gallery/projects//professional/01/12.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/01/12.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/01/13.jpg" data-src="images/gallery/projects//professional/01/13.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/01/13.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
-					<ul id="lightgallery_PROF2" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/02/01.jpg"
-							data-src="images/gallery/projects/professional/02/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/professional/02/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/02/02.jpg"
-							data-src="images/gallery/projects//professional/02/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/02/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/02/03.jpg"
-							data-src="images/gallery/projects//professional/02/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/02/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/02/04.jpg"
-							data-src="images/gallery/projects//professional/02/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/02/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/02/05.jpg"
-							data-src="images/gallery/projects//professional/02/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/02/05.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/02/06.jpg"
-							data-src="images/gallery/projects/professional/02/06.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/professional/02/06.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/02/07.jpg"
-							data-src="images/gallery/projects//professional/02/07.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/02/07.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/02/08.jpg"
-							data-src="images/gallery/projects//professional/02/08.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/02/08.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/02/09.jpg"
-							data-src="images/gallery/projects//professional/02/09.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/02/09.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/02/10.jpg"
-							data-src="images/gallery/projects//professional/02/10.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/02/10.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/02/11.jpg"
-							data-src="images/gallery/projects//professional/02/11.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/02/11.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_PROF2" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/02/01.jpg" data-src="images/gallery/projects/professional/02/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/professional/02/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/02/02.jpg" data-src="images/gallery/projects//professional/02/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/02/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/02/03.jpg" data-src="images/gallery/projects//professional/02/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/02/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/02/04.jpg" data-src="images/gallery/projects//professional/02/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/02/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/02/05.jpg" data-src="images/gallery/projects//professional/02/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/02/05.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/02/06.jpg" data-src="images/gallery/projects/professional/02/06.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/professional/02/06.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/02/07.jpg" data-src="images/gallery/projects//professional/02/07.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/02/07.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/02/08.jpg" data-src="images/gallery/projects//professional/02/08.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/02/08.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/02/09.jpg" data-src="images/gallery/projects//professional/02/09.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/02/09.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/02/10.jpg" data-src="images/gallery/projects//professional/02/10.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/02/10.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/02/11.jpg" data-src="images/gallery/projects//professional/02/11.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/02/11.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
 
-					<ul id="lightgallery_PROF3" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/03/01.jpg"
-							data-src="images/gallery/projects/professional/03/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/professional/03/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/03/02.jpg"
-							data-src="images/gallery/projects//professional/03/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/03/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/03/03.jpg"
-							data-src="images/gallery/projects//professional/03/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/03/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/03/04.jpg"
-							data-src="images/gallery/projects//professional/03/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/03/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/03/05.jpg"
-							data-src="images/gallery/projects//professional/03/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/03/05.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/03/06.jpg"
-							data-src="images/gallery/projects/professional/03/06.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/professional/03/06.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/03/07.jpg"
-							data-src="images/gallery/projects//professional/03/07.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/03/07.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/03/08.jpg"
-							data-src="images/gallery/projects//professional/03/08.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/03/08.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/03/10.jpg"
-							data-src="images/gallery/projects//professional/03/10.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/03/10.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_PROF3" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/03/01.jpg" data-src="images/gallery/projects/professional/03/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/professional/03/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/03/02.jpg" data-src="images/gallery/projects//professional/03/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/03/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/03/03.jpg" data-src="images/gallery/projects//professional/03/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/03/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/03/04.jpg" data-src="images/gallery/projects//professional/03/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/03/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/03/05.jpg" data-src="images/gallery/projects//professional/03/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/03/05.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/03/06.jpg" data-src="images/gallery/projects/professional/03/06.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/professional/03/06.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/03/07.jpg" data-src="images/gallery/projects//professional/03/07.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/03/07.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/03/08.jpg" data-src="images/gallery/projects//professional/03/08.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/03/08.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/03/10.jpg" data-src="images/gallery/projects//professional/03/10.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/03/10.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
 
 
-					<ul id="lightgallery_PROF4" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/04/01.jpg"
-							data-src="images/gallery/projects/professional/04/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/professional/04/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/04/02.jpg"
-							data-src="images/gallery/projects//professional/04/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/04/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/04/03.jpg"
-							data-src="images/gallery/projects//professional/04/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/04/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/04/04.jpg"
-							data-src="images/gallery/projects//professional/04/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/04/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/04/05.jpg"
-							data-src="images/gallery/projects//professional/04/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/04/05.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/04/06.jpg"
-							data-src="images/gallery/projects/professional/04/06.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/professional/04/06.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/04/07.jpg"
-							data-src="images/gallery/projects//professional/04/07.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/04/07.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/04/08.jpg"
-							data-src="images/gallery/projects//professional/04/08.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/04/08.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/04/09.jpg"
-							data-src="images/gallery/projects//professional/04/09.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/04/09.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/04/10.jpg"
-							data-src="images/gallery/projects//professional/04/10.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/04/10.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/04/11.jpg"
-							data-src="images/gallery/projects//professional/04/11.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/04/11.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/04/12.jpg"
-							data-src="images/gallery/projects//professional/04/12.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/04/12.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_PROF4" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/04/01.jpg" data-src="images/gallery/projects/professional/04/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/professional/04/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/04/02.jpg" data-src="images/gallery/projects//professional/04/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/04/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/04/03.jpg" data-src="images/gallery/projects//professional/04/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/04/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/04/04.jpg" data-src="images/gallery/projects//professional/04/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/04/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/04/05.jpg" data-src="images/gallery/projects//professional/04/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/04/05.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/04/06.jpg" data-src="images/gallery/projects/professional/04/06.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/professional/04/06.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/04/07.jpg" data-src="images/gallery/projects//professional/04/07.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/04/07.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/04/08.jpg" data-src="images/gallery/projects//professional/04/08.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/04/08.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/04/09.jpg" data-src="images/gallery/projects//professional/04/09.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/04/09.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/04/10.jpg" data-src="images/gallery/projects//professional/04/10.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/04/10.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/04/11.jpg" data-src="images/gallery/projects//professional/04/11.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/04/11.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/04/12.jpg" data-src="images/gallery/projects//professional/04/12.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/04/12.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
 
 
 
-					<ul id="lightgallery_PROF5" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/04/01.jpg"
-							data-src="images/gallery/projects/professional/04/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/professional/04/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/04/02.jpg"
-							data-src="images/gallery/projects//professional/04/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/04/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/04/03.jpg"
-							data-src="images/gallery/projects//professional/04/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/04/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/04/04.jpg"
-							data-src="images/gallery/projects//professional/04/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/04/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects//professional/04/05.jpg"
-							data-src="images/gallery/projects//professional/04/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects//professional/04/05.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_PROF5" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/04/01.jpg" data-src="images/gallery/projects/professional/04/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/professional/04/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/04/02.jpg" data-src="images/gallery/projects//professional/04/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/04/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/04/03.jpg" data-src="images/gallery/projects//professional/04/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/04/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/04/04.jpg" data-src="images/gallery/projects//professional/04/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/04/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects//professional/04/05.jpg" data-src="images/gallery/projects//professional/04/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects//professional/04/05.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
-					<ul id="lightgallery_PROF6" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/06/01.jpg"
-							data-src="images/gallery/projects/professional/06/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/professional/06/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/06/02.jpg"
-							data-src="images/gallery/projects/professional/06/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/professional/06/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/06/03.jpg"
-							data-src="images/gallery/projects/professional/06/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/professional/06/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/06/04.jpg"
-							data-src="images/gallery/projects/professional/06/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/professional/06/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/06/05.jpg"
-							data-src="images/gallery/projects/professional/06/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/professional/06/05.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_PROF6" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/06/01.jpg" data-src="images/gallery/projects/professional/06/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/professional/06/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/06/02.jpg" data-src="images/gallery/projects/professional/06/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/professional/06/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/06/03.jpg" data-src="images/gallery/projects/professional/06/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/professional/06/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/06/04.jpg" data-src="images/gallery/projects/professional/06/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/professional/06/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/06/05.jpg" data-src="images/gallery/projects/professional/06/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/professional/06/05.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
 
 
 
-					<ul id="lightgallery_DIST1" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/distributed/01/01.jpg"
-							data-src="images/gallery/projects/distributed/01/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/distributed/01/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/distributed/01/02.jpg"
-							data-src="images/gallery/projects/distributed/01/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/distributed/01/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/06/03.jpg"
-							data-src="images/gallery/projects/distributed/01/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/distributed/01/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/distributed/01/04.jpg"
-							data-src="images/gallery/projects/distributed/01/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/distributed/01/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/distributed/01/05.jpg"
-							data-src="images/gallery/projects/distributed/01/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/distributed/01/05.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/06/06.jpg"
-							data-src="images/gallery/projects/distributed/01/06.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/distributed/01/06.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/distributed/01/07.jpg"
-							data-src="images/gallery/projects/distributed/01/07.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/distributed/01/07.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/distributed/01/08.jpg"
-							data-src="images/gallery/projects/distributed/01/08.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/distributed/01/08.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_DIST1" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/distributed/01/01.jpg" data-src="images/gallery/projects/distributed/01/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/distributed/01/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/distributed/01/02.jpg" data-src="images/gallery/projects/distributed/01/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/distributed/01/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/06/03.jpg" data-src="images/gallery/projects/distributed/01/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/distributed/01/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/distributed/01/04.jpg" data-src="images/gallery/projects/distributed/01/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/distributed/01/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/distributed/01/05.jpg" data-src="images/gallery/projects/distributed/01/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/distributed/01/05.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/06/06.jpg" data-src="images/gallery/projects/distributed/01/06.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/distributed/01/06.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/distributed/01/07.jpg" data-src="images/gallery/projects/distributed/01/07.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/distributed/01/07.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/distributed/01/08.jpg" data-src="images/gallery/projects/distributed/01/08.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/distributed/01/08.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
-					<ul id="lightgallery_DIST2" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/distributed/02/01.jpg"
-							data-src="images/gallery/projects/distributed/02/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/distributed/02/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/distributed/02/02.jpg"
-							data-src="images/gallery/projects/distributed/02/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/distributed/02/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/06/03.jpg"
-							data-src="images/gallery/projects/distributed/02/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/distributed/02/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/distributed/02/04.jpg"
-							data-src="images/gallery/projects/distributed/02/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/distributed/02/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/distributed/02/05.jpg"
-							data-src="images/gallery/projects/distributed/02/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/distributed/02/05.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3"
-							data-responsive="images/gallery/projects/professional/06/06.jpg"
-							data-src="images/gallery/projects/distributed/02/06.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/projects/distributed/02/06.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_DIST2" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/distributed/02/01.jpg" data-src="images/gallery/projects/distributed/02/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/distributed/02/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/distributed/02/02.jpg" data-src="images/gallery/projects/distributed/02/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/distributed/02/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/06/03.jpg" data-src="images/gallery/projects/distributed/02/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/distributed/02/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/distributed/02/04.jpg" data-src="images/gallery/projects/distributed/02/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/distributed/02/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/distributed/02/05.jpg" data-src="images/gallery/projects/distributed/02/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/distributed/02/05.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/projects/professional/06/06.jpg" data-src="images/gallery/projects/distributed/02/06.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/projects/distributed/02/06.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
-					<ul id="lightgallery_BNG1" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/01.jpg"
-							data-src="images/gallery/bangalore/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/02.jpg"
-							data-src="images/gallery/bangalore/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/03.jpg"
-							data-src="images/gallery/bangalore/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/04.jpg"
-							data-src="images/gallery/bangalore/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/05.jpg"
-							data-src="images/gallery/bangalore/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/05.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/06.jpg"
-							data-src="images/gallery/bangalore/06.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/06.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/07.jpg"
-							data-src="images/gallery/bangalore/07.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/07.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/08.jpg"
-							data-src="images/gallery/bangalore/08.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/08.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/09.jpg"
-							data-src="images/gallery/bangalore/09.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/09.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/10.jpg"
-							data-src="images/gallery/bangalore/10.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/10.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/11.jpg"
-							data-src="images/gallery/bangalore/11.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/11.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/12.jpg"
-							data-src="images/gallery/bangalore/12.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/12.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/13.jpg"
-							data-src="images/gallery/bangalore/13.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/13.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/14.jpg"
-							data-src="images/gallery/bangalore/14.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/14.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/15.jpg"
-							data-src="images/gallery/bangalore/15.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/15.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/16.jpg"
-							data-src="images/gallery/bangalore/16.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/16.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/17.jpg"
-							data-src="images/gallery/bangalore/17.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/17.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/18.jpg"
-							data-src="images/gallery/bangalore/18.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/18.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/19.jpg"
-							data-src="images/gallery/bangalore/19.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/19.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/20.jpg"
-							data-src="images/gallery/bangalore/20.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/20.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/21.jpg"
-							data-src="images/gallery/bangalore/21.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/21.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/22.jpg"
-							data-src="images/gallery/bangalore/22.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/22.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/23.jpg"
-							data-src="images/gallery/bangalore/23.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/23.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/24.jpg"
-							data-src="images/gallery/bangalore/24.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/bangalore/24.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_BNG1" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/01.jpg" data-src="images/gallery/bangalore/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/02.jpg" data-src="images/gallery/bangalore/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/03.jpg" data-src="images/gallery/bangalore/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/04.jpg" data-src="images/gallery/bangalore/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/05.jpg" data-src="images/gallery/bangalore/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/05.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/06.jpg" data-src="images/gallery/bangalore/06.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/06.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/07.jpg" data-src="images/gallery/bangalore/07.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/07.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/08.jpg" data-src="images/gallery/bangalore/08.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/08.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/09.jpg" data-src="images/gallery/bangalore/09.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/09.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/10.jpg" data-src="images/gallery/bangalore/10.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/10.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/11.jpg" data-src="images/gallery/bangalore/11.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/11.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/12.jpg" data-src="images/gallery/bangalore/12.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/12.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/13.jpg" data-src="images/gallery/bangalore/13.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/13.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/14.jpg" data-src="images/gallery/bangalore/14.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/14.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/15.jpg" data-src="images/gallery/bangalore/15.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/15.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/16.jpg" data-src="images/gallery/bangalore/16.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/16.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/17.jpg" data-src="images/gallery/bangalore/17.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/17.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/18.jpg" data-src="images/gallery/bangalore/18.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/18.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/19.jpg" data-src="images/gallery/bangalore/19.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/19.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/20.jpg" data-src="images/gallery/bangalore/20.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/20.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/21.jpg" data-src="images/gallery/bangalore/21.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/21.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/22.jpg" data-src="images/gallery/bangalore/22.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/22.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/23.jpg" data-src="images/gallery/bangalore/23.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/23.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/bangalore/24.jpg" data-src="images/gallery/bangalore/24.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/bangalore/24.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
 
-					<ul id="lightgallery_CMB1" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/01.jpg"
-							data-src="images/gallery/cbe/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/02.jpg"
-							data-src="images/gallery/cbe/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbeƒ/03.jpg"
-							data-src="images/gallery/cbe/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/04.jpg"
-							data-src="images/gallery/cbe/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/05.jpg"
-							data-src="images/gallery/cbe/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/05.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/06.jpg"
-							data-src="images/gallery/cbe/06.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/06.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/07.jpg"
-							data-src="images/gallery/cbe/07.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/07.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/08.jpg"
-							data-src="images/gallery/cbe/08.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/08.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/09.jpg"
-							data-src="images/gallery/cbe/09.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/09.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/10.jpg"
-							data-src="images/gallery/cbe/10.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/10.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/11.jpg"
-							data-src="images/gallery/cbe/11.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/11.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/12.jpg"
-							data-src="images/gallery/cbe/12.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/12.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/13.jpg"
-							data-src="images/gallery/cbe/13.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/13.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/14.jpg"
-							data-src="images/gallery/cbe/14.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/14.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/15.jpg"
-							data-src="images/gallery/cbe/15.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/15.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/16.jpg"
-							data-src="images/gallery/cbe/16.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/16.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/17.jpg"
-							data-src="images/gallery/cbe/17.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/17.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/18.jpg"
-							data-src="images/gallery/cbe/18.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/cbe/18.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_CMB1" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/01.jpg" data-src="images/gallery/cbe/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/02.jpg" data-src="images/gallery/cbe/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbeƒ/03.jpg" data-src="images/gallery/cbe/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/04.jpg" data-src="images/gallery/cbe/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/05.jpg" data-src="images/gallery/cbe/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/05.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/06.jpg" data-src="images/gallery/cbe/06.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/06.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/07.jpg" data-src="images/gallery/cbe/07.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/07.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/08.jpg" data-src="images/gallery/cbe/08.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/08.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/09.jpg" data-src="images/gallery/cbe/09.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/09.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/10.jpg" data-src="images/gallery/cbe/10.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/10.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/11.jpg" data-src="images/gallery/cbe/11.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/11.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/12.jpg" data-src="images/gallery/cbe/12.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/12.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/13.jpg" data-src="images/gallery/cbe/13.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/13.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/14.jpg" data-src="images/gallery/cbe/14.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/14.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/15.jpg" data-src="images/gallery/cbe/15.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/15.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/16.jpg" data-src="images/gallery/cbe/16.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/16.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/17.jpg" data-src="images/gallery/cbe/17.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/17.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/cbe/18.jpg" data-src="images/gallery/cbe/18.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/cbe/18.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
-					<ul id="lightgallery_UBC1" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/01.jpg"
-							data-src="images/gallery/ubcity/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/ubcity/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/02.jpg"
-							data-src="images/gallery/ubcity/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/ubcity/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/03.jpg"
-							data-src="images/gallery/ubcity/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/ubcity/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/04.jpg"
-							data-src="images/gallery/ubcity/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/ubcity/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/05.jpg"
-							data-src="images/gallery/ubcity/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/ubcity/05.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/06.jpg"
-							data-src="images/gallery/ubcity/06.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/ubcity/06.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/07.jpg"
-							data-src="images/gallery/ubcity/07.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/ubcity/07.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/08.jpg"
-							data-src="images/gallery/ubcity/08.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/ubcity/08.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/09.jpg"
-							data-src="images/gallery/ubcity/09.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/ubcity/09.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_UBC1" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/01.jpg" data-src="images/gallery/ubcity/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/ubcity/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/02.jpg" data-src="images/gallery/ubcity/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/ubcity/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/03.jpg" data-src="images/gallery/ubcity/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/ubcity/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/04.jpg" data-src="images/gallery/ubcity/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/ubcity/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/05.jpg" data-src="images/gallery/ubcity/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/ubcity/05.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/06.jpg" data-src="images/gallery/ubcity/06.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/ubcity/06.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/07.jpg" data-src="images/gallery/ubcity/07.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/ubcity/07.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/08.jpg" data-src="images/gallery/ubcity/08.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/ubcity/08.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/ubcity/09.jpg" data-src="images/gallery/ubcity/09.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/ubcity/09.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
 
-					<ul id="lightgallery_ACE1" class="list-unstyled row">
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/01.jpg"
-							data-src="images/gallery/acetech/01.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/acetech/01.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/02.jpg"
-							data-src="images/gallery/acetech/02.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/acetech/02.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/03.jpg"
-							data-src="images/gallery/acetech/03.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/acetech/03.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/04.jpg"
-							data-src="images/gallery/acetech/04.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/acetech/04.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/05.jpg"
-							data-src="images/gallery/acetech/05.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/acetech/05.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/06.jpg"
-							data-src="images/gallery/acetech/06.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/acetech/06.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/07.jpg"
-							data-src="images/gallery/acetech/07.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/acetech/07.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/08.jpg"
-							data-src="images/gallery/acetech/08.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/acetech/08.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/09.jpg"
-							data-src="images/gallery/acetech/09.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/acetech/09.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/10.jpg"
-							data-src="images/gallery/acetech/10.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/acetech/10.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/11.jpg"
-							data-src="images/gallery/acetech/11.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/acetech/11.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/12.jpg"
-							data-src="images/gallery/acetech/12.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/acetech/12.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/13.jpg"
-							data-src="images/gallery/acetech/13.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/acetech/13.jpg">
-							</a>
-						</li>
-						<li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/14.jpg"
-							data-src="images/gallery/acetech/14.jpg" data-sub-html="">
-							<a href="">
-								<img class="img-responsive" src="images/gallery/acetech/14.jpg">
-							</a>
-						</li>
-					</ul>
+                    <ul id="lightgallery_ACE1" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/01.jpg" data-src="images/gallery/acetech/01.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/acetech/01.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/02.jpg" data-src="images/gallery/acetech/02.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/acetech/02.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/03.jpg" data-src="images/gallery/acetech/03.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/acetech/03.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/04.jpg" data-src="images/gallery/acetech/04.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/acetech/04.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/05.jpg" data-src="images/gallery/acetech/05.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/acetech/05.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/06.jpg" data-src="images/gallery/acetech/06.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/acetech/06.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/07.jpg" data-src="images/gallery/acetech/07.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/acetech/07.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/08.jpg" data-src="images/gallery/acetech/08.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/acetech/08.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/09.jpg" data-src="images/gallery/acetech/09.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/acetech/09.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/10.jpg" data-src="images/gallery/acetech/10.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/acetech/10.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/11.jpg" data-src="images/gallery/acetech/11.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/acetech/11.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/12.jpg" data-src="images/gallery/acetech/12.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/acetech/12.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/13.jpg" data-src="images/gallery/acetech/13.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/acetech/13.jpg">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="images/gallery/acetech/14.jpg" data-src="images/gallery/acetech/14.jpg" data-sub-html="">
+                            <a href="">
+                                <img class="img-responsive" src="images/gallery/acetech/14.jpg">
+                            </a>
+                        </li>
+                    </ul>
 
-				</div>
+                </div>
 
-			</div>
-			<div class="col-md-3 col-xs-3" style="padding: 0px 0px 0px 25px;">
-				<h3 class="gallery_header">CLIENT PROJECTS</h3>
-				<div class="sidenav">
-					<button class="dropdown-btn">LIFE STYLE THEATERS
+            </div>
+            <div class="col-md-3 col-xs-3" style="padding: 0px 0px 0px 25px;">
+                <h3 class="gallery_header">CLIENT PROJECTS</h3>
+                <div class="sidenav">
+                    <button class="dropdown-btn">LIFE STYLE THEATERS
 						<i class="fa fa-caret-down"></i>
 					</button>
-					<div class="dropdown-container">
-						<a onclick="demo(1,'LST')">PROJECT 01</a>
-						<a onclick="demo(2,'LST')">PROJECT 02</a>
-						<a onclick="demo(3,'LST')">PROJECT 03</a>
-						<a onclick="demo(4,'LST')">PROJECT 04</a>
-						<a onclick="demo(5,'LST')">PROJECT 05</a>
-						<a onclick="demo(6,'LST')">PROJECT 06</a>
-						<a onclick="demo(7,'LST')">PROJECT 07</a>
-					</div>
-					<button class="dropdown-btn">PROFESSIONAL THEATERS
+                    <div class="dropdown-container">
+                        <a onclick="demo(1,'LST')">PROJECT 01</a>
+                        <a onclick="demo(2,'LST')">PROJECT 02</a>
+                        <a onclick="demo(3,'LST')">PROJECT 03</a>
+                        <a onclick="demo(4,'LST')">PROJECT 04</a>
+                        <a onclick="demo(5,'LST')">PROJECT 05</a>
+                        <a onclick="demo(6,'LST')">PROJECT 06</a>
+                        <a onclick="demo(7,'LST')">PROJECT 07</a>
+                    </div>
+                    <button class="dropdown-btn">PROFESSIONAL THEATERS
 						<i class="fa fa-caret-down"></i>
 					</button>
-					<div class="dropdown-container">
-						<a onclick="demo(1,'PROF')">PROJECT 01</a>
-						<a onclick="demo(2,'PROF')">PROJECT 02</a>
-						<a onclick="demo(3,'PROF')">PROJECT 03</a>
-						<a onclick="demo(4,'PROF')">PROJECT 04</a>
-						<a onclick="demo(6,'PROF')">PROJECT 05</a>
-						<!-- <a onclick="demo(6,'PROF')">PROJECT 06</a>
+                    <div class="dropdown-container">
+                        <a onclick="demo(1,'PROF')">PROJECT 01</a>
+                        <a onclick="demo(2,'PROF')">PROJECT 02</a>
+                        <a onclick="demo(3,'PROF')">PROJECT 03</a>
+                        <a onclick="demo(4,'PROF')">PROJECT 04</a>
+                        <a onclick="demo(6,'PROF')">PROJECT 05</a>
+                        <!-- <a onclick="demo(6,'PROF')">PROJECT 06</a>
 						<a onclick="demo(7,'PROF')">PROJECT 07</a> -->
-					</div>
-					<button class="dropdown-btn">DISTRIBUTED AUDIO
+                    </div>
+                    <button class="dropdown-btn">DISTRIBUTED AUDIO
 						<i class="fa fa-caret-down"></i>
 					</button>
-					<div class="dropdown-container">
-						<a onclick="demo(1,'DIST')">PROJECT 01</a>
-						<a onclick="demo(2,'DIST')">PROJECT 02</a>
-					</div>
-				</div>
-				<h3 class="gallery_header">AUDISEE SHOWROOM & EVENTS</h3>
-				<div class="sidenav">
-					<a onclick="demo(1,'BNG')">BANGALORE</a>
-					<a onclick="demo(1,'CMB')">COIMBATORE</a>
-					<a onclick="demo(1,'UBC')">UB CITY</a>
-					<a onclick="demo(1,'ACE')">ACE TECH</a>
-				</div>
-			</div>
-		</div>
-	</div>
+                    <div class="dropdown-container">
+                        <a onclick="demo(1,'DIST')">PROJECT 01</a>
+                        <a onclick="demo(2,'DIST')">PROJECT 02</a>
+                    </div>
+                </div>
+                <h3 class="gallery_header">AUDISEE SHOWROOM & EVENTS</h3>
+                <div class="sidenav">
+                    <a onclick="demo(1,'BNG')">BANGALORE</a>
+                    <a onclick="demo(1,'CMB')">COIMBATORE</a>
+                    <a onclick="demo(1,'UBC')">UB CITY</a>
+                    <a onclick="demo(1,'ACE')">ACE TECH</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-	<div class="main_abput3">
-		<div class="container new_align">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="row">
+    <div class="main_abput3">
+        <div class="container new_align">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
 
-						<h2 class="main_header text-center">CONTACT</h2>
-						<div class="col-md-5 col-sm-8 col-xs-12 pding_top3">
-							<ul class="footer_ln2">
-								<li>
-									<h2>Coimbatore</h2>
-								</li>
-								<li><span>No - 10, Nehru Stadium,<br>
+                        <h2 class="main_header text-center">CONTACT</h2>
+                        <div class="col-md-5 col-sm-8 col-xs-12 pding_top3">
+                            <ul class="footer_ln2">
+                                <li>
+                                    <h2>Coimbatore</h2>
+                                </li>
+                                <li><span>No - 10, Nehru Stadium,<br>
 										Coimbatore - 641 018.<br>
 										Tamil Nadu, India.</span></li>
-								<br>
-								<li>Call us now:
-									<span>+91422 4204082, 4204083</span></li>
-								<li>Email:
-									<span>info@audisee.in</span></li>
-								<li>Contact Person<br>
-									<span>Mr. R. Mohammed Wasif</span>
-									<span>M: +91 99441 23222</span>
-									<span>E: vasif@audisee.in</span>
-								</li>
-							</ul>
-							<!-- <div id="mapidcoimb" style="margin-top:30px;width:100%; height:250px;">
+                                <br>
+                                <li>Call us now:
+                                    <span>+91422 4204082, 4204083</span></li>
+                                <li>Email:
+                                    <span>info@audisee.in</span></li>
+                                <li>Contact Person<br>
+                                    <span>Mr. R. Mohammed Wasif</span>
+                                    <span>M: +91 99441 23222</span>
+                                    <span>E: vasif@audisee.in</span>
+                                </li>
+                            </ul>
+                            <!-- <div id="mapidcoimb" style="margin-top:30px;width:100%; height:250px;">
 							</div> -->
-						</div>
-						<div class="col-md-2 col-sm-8 col-xs-12">
-							<img src="images/vertical-line.png" class="img-responsive center-block">
-						</div>
-						<div class="col-md-5 col-sm-8 col-xs-12 pding_top3">
-							<ul class="footer_lnk">
-								<li>
-									<h2>Bangalore</h2>
-								</li>
-								<li><span>No - 3335, 6th Cross Rd,
+                        </div>
+                        <div class="col-md-2 col-sm-8 col-xs-12">
+                            <img src="images/vertical-line.png" class="img-responsive center-block">
+                        </div>
+                        <div class="col-md-5 col-sm-8 col-xs-12 pding_top3">
+                            <ul class="footer_lnk">
+                                <li>
+                                    <h2>Bangalore</h2>
+                                </li>
+                                <li><span>No - 3335, 6th Cross Rd,
 										13th Main,
 										HAL 2nd stage,
 										Indiranagar,
 										Bangalore - 560 008.
 										Karnataka, India.</span></li>
-								<br>
-								<li>Call us now:
-									<span>+91 89035 55678</span></li>
-								<li>Email:
-									<span>info@audisee.in</span></li>
-								<li>Contact Person<br>
-									<span>Mr. Abrar Sait</span><br>
-									<span>M: +91 89035 55678</span><br>
-									<span>E: abrar@audisee.in</span>
-								</li>
-							</ul>
-							<!-- <div id="mapid" style="margin-top:30px;width:100%; height:250px;">
+                                <br>
+                                <li>Call us now:
+                                    <span>+91 89035 55678</span></li>
+                                <li>Email:
+                                    <span>info@audisee.in</span></li>
+                                <li>Contact Person<br>
+                                    <span>Mr. Abrar Sait</span><br>
+                                    <span>M: +91 89035 55678</span><br>
+                                    <span>E: abrar@audisee.in</span>
+                                </li>
+                            </ul>
+                            <!-- <div id="mapid" style="margin-top:30px;width:100%; height:250px;">
 							</div> -->
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<span class="social-icons">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="social-icons">
 								<a target="_blank" href="https://www.facebook.com/" title="Facebook"
 									class="fa fa-facebook-official"></a>
 								<a target="_blank" href="https://www.twitter.com/" title="Twitter"
@@ -1710,157 +1416,162 @@
 								<a target="_blank" href="https://www.pinterest.com/" title="Pinterest"
 									class="fa fa-pinterest"></a>
 							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="copy_footer">Copyright © 2020 Audisee. All Rights Reserved</div>
-	<script src='js/bootstrap.min.js'></script>
-	<script src="js/menubar.js"></script>
-	<a href="index.html#0" class="cd-top">Top</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy_footer">Copyright © 2020 Audisee. All Rights Reserved</div>
+    <script src='js/bootstrap.min.js'></script>
+    <script src="js/menubar.js"></script>
+    <a href="index.html#0" class="cd-top">Top</a>
 
-	<link href="css/sampslider.css" rel="stylesheet">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/custome.css" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
-	<script type="text/javascript">
-		var LSTprojects = [1, 2, 3, 4, 5, 6, 7];
-		var PROFprojects = [1, 2, 3, 4, 5, 6, 7];
-		var DISTprojects = [1, 2];
-		var BNG, CMB, UBC, ACE;
-		BNG = CMB = UBC = ACE = [1];
+    <link href="css/sampslider.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custome.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+        var LSTprojects = [1, 2, 3, 4, 5, 6, 7];
+        var PROFprojects = [1, 2, 3, 4, 5, 6, 7];
+        var DISTprojects = [1, 2];
+        var BNG, CMB, UBC, ACE;
+        BNG = CMB = UBC = ACE = [1];
 
-		$(window).load(function () {
-			$('.flexslider').flexslider({
-				animation: "slide",
-				start: function (slider) {
-					$('body').removeClass('loading');
-				}
-			});
-		});
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function(slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
 
-		$(document).ready(function () {
-			LSTprojects.forEach(p => {
-				$("#lightgallery_LST" + p).lightGallery();
-				$("#lightgallery_LST" + p).hide();
-			});
-			PROFprojects.forEach(p => {
-				$("#lightgallery_PROF" + p).lightGallery();
-				$("#lightgallery_PROF" + p).hide();
-			});
-			DISTprojects.forEach(p => {
-				$("#lightgallery_DIST" + p).lightGallery();
-				$("#lightgallery_DIST" + p).hide();
-			});
+        $(document).ready(function() {
+            LSTprojects.forEach(p => {
+                $("#lightgallery_LST" + p).lightGallery();
+                $("#lightgallery_LST" + p).hide();
+            });
+            PROFprojects.forEach(p => {
+                $("#lightgallery_PROF" + p).lightGallery();
+                $("#lightgallery_PROF" + p).hide();
+            });
+            DISTprojects.forEach(p => {
+                $("#lightgallery_DIST" + p).lightGallery();
+                $("#lightgallery_DIST" + p).hide();
+            });
 
-			$("#lightgallery_BNG1").lightGallery().hide();
-			$("#lightgallery_CMB1").lightGallery().hide();
-			$("#lightgallery_ACE1").lightGallery().hide();
-			$("#lightgallery_UBC1").lightGallery().hide();
-			$("#projname").html("Life Style Theaters - Project 1");
-			// $("#lightgallery_LST1").show();
-		});
+            $("#lightgallery_BNG1").lightGallery().hide();
+            $("#lightgallery_CMB1").lightGallery().hide();
+            $("#lightgallery_ACE1").lightGallery().hide();
+            $("#lightgallery_UBC1").lightGallery().hide();
+            $("#projname").html("Life Style Theaters - Project 1");
+            // $("#lightgallery_LST1").show();
+        });
 
-		function demo(n, t) {
-			$("#initSlider").hide();
-			for (var i = 1, len = LSTprojects.length; i <= len; i++) {
-				$("#lightgallery_LST" + i).hide();
-			}
-			for (var i = 1, len = PROFprojects.length; i <= len; i++) {
-				$("#lightgallery_PROF" + i).hide();
-			}
-			for (var i = 1, len = DISTprojects.length; i <= len; i++) {
-				$("#lightgallery_DIST" + i).hide();
-			}
-			$("#lightgallery_BNG1,#lightgallery_CMB1,#lightgallery_UBC1,#lightgallery_ACE1").hide();
-			$("#lightgallery_" + t + n).show();
-			var pname = '';
-			if (t == 'LST') {
-				pname = "Life Style Theaters"
-			} if (t == 'PROF') {
-				pname = "Professional Theaters"
-			} if (t == 'DIST') {
-				pname = "Distributed Audio"
-			}
-			$("#projname").html(pname + " - Project " + n);
-			if (t == 'BNG') {
-				$("#projname").html("Audisee - Bangalore");
-			} if (t == 'CMB') {
-				$("#projname").html("Audisee - Coimbatore");
-			} if (t == 'UBC') {
-				$("#projname").html("Audisee - UB City");
-			} if (t == 'ACE') {
-				$("#projname").html("Audisee - ACE Tech");
-			}
-		}
+        function demo(n, t) {
+            $("#initSlider").hide();
+            for (var i = 1, len = LSTprojects.length; i <= len; i++) {
+                $("#lightgallery_LST" + i).hide();
+            }
+            for (var i = 1, len = PROFprojects.length; i <= len; i++) {
+                $("#lightgallery_PROF" + i).hide();
+            }
+            for (var i = 1, len = DISTprojects.length; i <= len; i++) {
+                $("#lightgallery_DIST" + i).hide();
+            }
+            $("#lightgallery_BNG1,#lightgallery_CMB1,#lightgallery_UBC1,#lightgallery_ACE1").hide();
+            $("#lightgallery_" + t + n).show();
+            var pname = '';
+            if (t == 'LST') {
+                pname = "Life Style Theaters"
+            }
+            if (t == 'PROF') {
+                pname = "Professional Theaters"
+            }
+            if (t == 'DIST') {
+                pname = "Distributed Audio"
+            }
+            $("#projname").html(pname + " - Project " + n);
+            if (t == 'BNG') {
+                $("#projname").html("Audisee - Bangalore");
+            }
+            if (t == 'CMB') {
+                $("#projname").html("Audisee - Coimbatore");
+            }
+            if (t == 'UBC') {
+                $("#projname").html("Audisee - UB City");
+            }
+            if (t == 'ACE') {
+                $("#projname").html("Audisee - ACE Tech");
+            }
+        }
 
-		/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-		var dropdown = document.getElementsByClassName("dropdown-btn");
-		var i;
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
 
-		for (i = 0; i < dropdown.length; i++) {
-			dropdown[i].addEventListener("click", function () {
-				this.classList.toggle("active");
-				var dropdownContent = this.nextElementSibling;
-				if (dropdownContent.style.display === "block") {
-					dropdownContent.style.display = "none";
-				} else {
-					dropdownContent.style.display = "block";
-				}
-			});
-		}
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
 
-		$('#demo').sampSlider({
+        $('#demo').sampSlider({
 
-			// // auto size images
-			// autosize: true,
+            // // auto size images
+            // autosize: true,
 
-			// // width of the slideshow
-			// width: 900,
+            // // width of the slideshow
+            // width: 900,
 
-			// // width overrides height with aspect ratio
-			// height: 600,
+            // // width overrides height with aspect ratio
+            // height: 600,
 
-			// // overrides autosize. when false it is calculated
-			// aspectratio: false,
+            // // overrides autosize. when false it is calculated
+            // aspectratio: false,
 
-			// // 0 or delay in milliseconds
-			// autoplay: 0,
+            // // 0 or delay in milliseconds
+            // autoplay: 0,
 
-			// // true to show drag-navi
-			// dragonbar: false,
+            // // true to show drag-navi
+            // dragonbar: false,
 
-			// // true to show arrows navigation
-			// arrows: true,
+            // // true to show arrows navigation
+            // arrows: true,
 
-			// // infinite loop
-			// loop: true,
+            // // infinite loop
+            // loop: true,
 
-			// // slide speed
-			// slidespeed: 500,
+            // // slide speed
+            // slidespeed: 500,
 
-			// // 1 and up
-			// startslide: 1,
+            // // 1 and up
+            // startslide: 1,
 
-			// // if automatically scroll to top of slider
-			// gototop: false,
+            // // if automatically scroll to top of slider
+            // gototop: false,
 
-			// // called before image switch 
-			// beforeslide: null,
+            // // called before image switch 
+            // beforeslide: null,
 
-			// // called after image switch
-			// afterslide: null,
+            // // called after image switch
+            // afterslide: null,
 
-			// // callback
-			// afterinit: function () {
-			// 	console.log('Vroom.');
-			// }
+            // // callback
+            // afterinit: function () {
+            // 	console.log('Vroom.');
+            // }
 
-		});
-	</script>
-	<script src="js/lightgallery-all.min.js"></script>
+        });
+    </script>
+    <script src="js/lightgallery-all.min.js"></script>
 </body>
 
 </html>

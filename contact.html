@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <title>Auddisee</title>
     <link rel="shortcut icon" href="favicon.ico" />
     <meta name="Description" content="">
@@ -15,9 +14,7 @@
     <link href="css/base.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CRaleway:300,400,500,600,700,800,900%7CRubik:300,400,500,700,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CRaleway:300,400,500,600,700,800,900%7CRubik:300,400,500,700,900&display=swap" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
     <script src="js/jquery11.min.js"></script>
@@ -33,19 +30,16 @@
                     <div class="row">
                         <div class="menubg_algn">
                             <div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                    data-target="#navbar-menu"><i class="fa fa-bars"></i></button>
-                                <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo_mwidth"
-                                        alt=""></a>
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i class="fa fa-bars"></i></button>
+                                <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo_mwidth" alt=""></a>
                             </div>
                             <div class="collapse navbar-collapse" id="navbar-menu">
                                 <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
                                     <li><a href="index.html#aboutus">About Us</a></li>
-                                    <li class="dropdown"><a href="products.html" class="dropdown-toggle"
-                                            data-toggle="dropdown" role="button" aria-haspopup="true"
-                                            aria-expanded="true"> <span class="nav-label">Products</span>
-                                             <!-- <span class="caret"></span> -->
-                                            </a>
+                                    <li class="dropdown">
+                                        <a href="products.html" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Products</span>
+                                            <!-- <span class="caret"></span> -->
+                                        </a>
                                         <!-- <ul class="dropdown-menu">
                                             <li><a href="products.html">All</a></li>
                                             <li><a href="acoustic.html">Acoustics</a></li>
@@ -73,8 +67,8 @@
     <div class="main_abput3">
         <div class="container new_align">
             <div class="row">
-                
-                <img src="images/sub_contact.jpg" />
+
+                <img class="col-xs-12" src="images/sub_contact.jpg" />
                 <!-- <div class="pding_top col-md-12 contact-img">
                     <img src="images/Contact Us Image.png" alt="">
                 </div> -->
@@ -84,26 +78,21 @@
                         <div id="contactWrapper">
                             <form id="contactform">
                                 <div class="col-md-4 one-second">
-                                    <input placeholder="Your name" type="text" name="name" id="name" size="40"
-                                        aria-required="true" aria-invalid="false" />
+                                    <input placeholder="Your name" type="text" name="name" id="name" size="40" aria-required="true" aria-invalid="false" />
                                 </div>
                                 <div class="col-md-4  one-second">
-                                    <input placeholder="Your e-mail" type="email" name="email" id="email" size="40"
-                                        aria-required="true" aria-invalid="false" />
+                                    <input placeholder="Your e-mail" type="email" name="email" id="email" size="40" aria-required="true" aria-invalid="false" />
                                 </div>
                                 <div class="col-md-4  one">
-                                    <input style="width:320px" placeholder="Phone" type="number" name="phone" id="phone"
-                                        aria-invalid="false" />
+                                    <input style="width:320px" placeholder="Phone" type="number" name="phone" id="phone" aria-invalid="false" />
                                 </div>
 
                                 <div class="col-md-2 pding_top4"></div>
                                 <div class="col-md-12  one">
-                                    <textarea placeholder="Message" name="body" id="body" style="width:100%;" rows="10"
-                                        aria-invalid="false"></textarea>
+                                    <textarea placeholder="Message" name="body" id="body" style="width:100%;" rows="10" aria-invalid="false"></textarea>
                                 </div>
                                 <div class="col-md-12 one">
-                                    <input type="button" style="margin-left:45%" value="Send A Message"
-                                        class="button_full_width" id="submit" onClick="return check_values();">
+                                    <input type="button" style="margin-left:45%" value="Send A Message" class="button_full_width" id="submit" onClick="return check_values();">
                                 </div>
                             </form>
                         </div>
@@ -212,7 +201,7 @@
     <script src="js/menubar.js"></script>
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
     <script>
-        jQuery(document).ready(function ($) {
+        jQuery(document).ready(function($) {
 
             var map = L.map('mapid').setView([12.9689955, 77.6361625], 13);
 
@@ -234,7 +223,8 @@
                 .bindPopup('Audisee Coimbatore')
                 .openPopup();
 
-        });</script>
+        });
+    </script>
     <a href="index.html#0" class="cd-top">Top</a>
 </body>
 
