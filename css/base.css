@@ -1,12 +1,21 @@
-#services, 
+#services,
 #acoustics,
-#gallery{
+#gallery {
     /* margin-top: 12%; */
 }
-#gallery{
+
+#gallery {
     padding: 10px 25px;
 }
 
-#gallery h2{
+#gallery h2 {
     text-align: center;
+}
+
+#features_slide {
+    margin-top: 50px;
+}
+
+.prod_titles {
+    margin: 0px 0 10px;
 }
